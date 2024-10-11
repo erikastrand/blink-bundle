@@ -2424,7 +2424,7 @@ We.formToJSON = (t) => SA(B.isHTMLForm(t) ? new FormData(t) : t);
 We.getAdapter = DA.getAdapter;
 We.HttpStatusCode = Xc;
 We.default = We;
-const MS = { BASE_URL: "/", DEV: !1, IS_WEB_COMPONENT: !0, MODE: "web-component", PROD: !0, SSR: !1, VITE_APP_TITLE: "Blink Games", VITE_DEV_API_BASE_URL: "http://localhost:8080", VITE_DEV_BASE_URL: "/", VITE_PROD_API_BASE_URL: "https://eu.blink.run", VITE_PROD_BASE_URL: "/games/blink-games/", VITE_STAGING_API_BASE_URL: "http://localhost:8080", VITE_STAGING_BASE_URL: "/games/blink-games/", VITE_WC_API_BASE_URL: "http://localhost:8080", VITE_WC_BASE_URL: "/", VITE_WC_BUILD_TYPE: "web-component" };
+const MS = { BASE_URL: "/", DEV: !1, IS_WEB_COMPONENT: !0, MODE: "web-component", PROD: !0, SSR: !1, VITE_DEV_API_BASE_URL: "http://localhost:3000", VITE_DEV_BASE_URL: "/", VITE_PROD_API_BASE_URL: "https://eu.blink.run", VITE_PROD_BASE_URL: "/games/blink-games/", VITE_STAGING_API_BASE_URL: "http://localhost:8080", VITE_STAGING_BASE_URL: "/games/blink-games/", VITE_WC_API_BASE_URL: "https://eu.blink.run", VITE_WC_BASE_URL: "/", VITE_WC_BUILD_TYPE: "web-component" };
 function Ui() {
   const [t, e] = Je(!1);
   return ze(() => {
@@ -31734,7 +31734,7 @@ const dV = ({ currency: t, lang: e, theme: n }) => {
       else
         throw A(!1), new Error("No token found.");
     })();
-  }, [Oe, v, n]), ze(() => {
+  }, [Oe, n]), ze(() => {
     ce && p.currencyCode !== t && Xe(t);
   }, [ce, p, t, Xe]);
   const ve = async () => {
