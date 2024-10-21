@@ -1,4 +1,4 @@
-/* Built at: 2024-10-21T08:44:55.326Z */
+/* Built at: 2024-10-21T09:40:26.236Z */
 var jw = Object.defineProperty;
 var Bw = (t, e, n) => e in t ? jw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var W = (t, e, n) => Bw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -32051,7 +32051,7 @@ const F9 = ({
             /* @__PURE__ */ m.jsx(ps, { className: "h-9 w-16 bg-gray-700" })
           ] }) : /* @__PURE__ */ m.jsxs(m.Fragment, { children: [
             /* @__PURE__ */ m.jsxs("div", { className: "flex items-center w-full bg-primary rounded-md px-2", children: [
-              /* @__PURE__ */ m.jsx("span", { className: "currency-icon-btc", children: s.prefixSymbol }),
+              /* @__PURE__ */ m.jsx("span", { className: "text-gray-400 mr-1", children: s.prefixSymbol }),
               /* @__PURE__ */ m.jsx(
                 ft,
                 {
