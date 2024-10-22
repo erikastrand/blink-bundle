@@ -1,4 +1,4 @@
-/* Built at: 2024-10-21T12:02:13.196Z */
+/* Built at: 2024-10-22T05:26:48.548Z */
 var _w = Object.defineProperty;
 var Jw = (t, e, n) => e in t ? _w(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var W = (t, e, n) => Jw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -44,14 +44,14 @@ var SA = { exports: {} }, qa = {};
   }
   var x = !1, S = !1, q = !1, C = !1, E = !1, T;
   T = Symbol.for("react.module.reference");
-  function k(P) {
+  function R(P) {
     return !!(typeof P == "string" || typeof P == "function" || P === s || P === i || E || P === r || P === c || P === u || C || P === h || x || S || q || typeof P == "object" && P !== null && (P.$$typeof === f || P.$$typeof === d || P.$$typeof === o || P.$$typeof === a || P.$$typeof === l || // This needs to include all possible module reference object
     // types supported by any Flight configuration anywhere since
     // we don't know which Flight build this will end up being used
     // with.
     P.$$typeof === T || P.getModuleId !== void 0));
   }
-  function R(P, j, Y) {
+  function k(P, j, Y) {
     var ie = P.displayName;
     if (ie)
       return ie;
@@ -91,7 +91,7 @@ var SA = { exports: {} }, qa = {};
           var Y = P;
           return D(Y._context) + ".Provider";
         case l:
-          return R(P, P.render, "ForwardRef");
+          return k(P, P.render, "ForwardRef");
         case d:
           var ie = P.displayName || null;
           return ie !== null ? ie : N(P.type) || "Memo";
@@ -556,7 +556,7 @@ Check the top-level render call using <` + Y + ">.");
   var fh = {};
   function hh(P, j, Y, ie, Re, Fe) {
     {
-      var Ae = k(P);
+      var Ae = R(P);
       if (!Ae) {
         var he = "";
         (P === void 0 || typeof P == "object" && P !== null && Object.keys(P).length === 0) && (he += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
@@ -1143,11 +1143,11 @@ class _a extends Ll {
       let x = !1, S = !1;
       const q = n.count !== void 0 && typeof n.count != "string", C = _a.hasDefaultValue(n), E = q ? this.pluralResolver.getSuffix(c, n.count, n) : "", T = n.ordinal && q ? this.pluralResolver.getSuffix(c, n.count, {
         ordinal: !1
-      }) : "", k = q && !n.ordinal && n.count === 0 && this.pluralResolver.shouldUseIntlApi(), R = k && n[`defaultValue${this.options.pluralSeparator}zero`] || n[`defaultValue${E}`] || n[`defaultValue${T}`] || n.defaultValue;
-      !this.isValidLookup(f) && C && (x = !0, f = R), this.isValidLookup(f) || (S = !0, f = o);
-      const N = (n.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && S ? void 0 : f, F = C && R !== f && this.options.updateMissing;
+      }) : "", R = q && !n.ordinal && n.count === 0 && this.pluralResolver.shouldUseIntlApi(), k = R && n[`defaultValue${this.options.pluralSeparator}zero`] || n[`defaultValue${E}`] || n[`defaultValue${T}`] || n.defaultValue;
+      !this.isValidLookup(f) && C && (x = !0, f = k), this.isValidLookup(f) || (S = !0, f = o);
+      const N = (n.missingKeyNoValueFallbackToKey || this.options.missingKeyNoValueFallbackToKey) && S ? void 0 : f, F = C && k !== f && this.options.updateMissing;
       if (S || x || F) {
-        if (this.logger.log(F ? "updateKey" : "missingKey", c, l, o, F ? R : f), i) {
+        if (this.logger.log(F ? "updateKey" : "missingKey", c, l, o, F ? k : f), i) {
           const O = this.resolve(o, {
             ...n,
             keySeparator: !1
@@ -1166,10 +1166,10 @@ class _a extends Ll {
         };
         this.options.saveMissing && (this.options.saveMissingPlurals && q ? B.forEach((O) => {
           const U = this.pluralResolver.getSuffixes(O, n);
-          k && n[`defaultValue${this.options.pluralSeparator}zero`] && U.indexOf(`${this.options.pluralSeparator}zero`) < 0 && U.push(`${this.options.pluralSeparator}zero`), U.forEach((H) => {
-            L([O], o + H, n[`defaultValue${H}`] || R);
+          R && n[`defaultValue${this.options.pluralSeparator}zero`] && U.indexOf(`${this.options.pluralSeparator}zero`) < 0 && U.push(`${this.options.pluralSeparator}zero`), U.forEach((H) => {
+            L([O], o + H, n[`defaultValue${H}`] || k);
           });
-        }) : L(B, o, R));
+        }) : L(B, o, k));
       }
       f = this.extendTranslation(f, e, n, d, s), S && f === o && this.options.appendNamespaceToMissingKey && (f = `${l}:${o}`), (S || x) && this.options.parseMissingKeyHandler && (this.options.compatibilityAPI !== "v1" ? f = this.options.parseMissingKeyHandler(this.options.appendNamespaceToMissingKey ? `${l}:${o}` : o, x ? f : void 0) : f = this.options.parseMissingKeyHandler(f));
     }
@@ -2723,7 +2723,7 @@ const He = (t) => {
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
   CS.test(t) && !PS.test(t)
 ), IA = () => !1, jS = (t) => qS.test(t), BS = (t) => ES.test(t), IS = () => {
-  const t = He("colors"), e = He("spacing"), n = He("blur"), s = He("brightness"), r = He("borderColor"), i = He("borderRadius"), o = He("borderSpacing"), a = He("borderWidth"), l = He("contrast"), c = He("grayscale"), u = He("hueRotate"), d = He("invert"), f = He("gap"), h = He("gradientColorStops"), p = He("gradientColorStopPositions"), g = He("inset"), A = He("margin"), b = He("opacity"), v = He("padding"), w = He("saturate"), x = He("scale"), S = He("sepia"), q = He("skew"), C = He("space"), E = He("translate"), T = () => ["auto", "contain", "none"], k = () => ["auto", "hidden", "clip", "visible", "scroll"], R = () => ["auto", ce, e], D = () => [ce, e], N = () => ["", zn, us], F = () => ["auto", Br, ce], B = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], V = () => ["solid", "dashed", "dotted", "double", "none"], L = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], O = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], U = () => ["", "0", ce], H = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], _ = () => [Br, ce];
+  const t = He("colors"), e = He("spacing"), n = He("blur"), s = He("brightness"), r = He("borderColor"), i = He("borderRadius"), o = He("borderSpacing"), a = He("borderWidth"), l = He("contrast"), c = He("grayscale"), u = He("hueRotate"), d = He("invert"), f = He("gap"), h = He("gradientColorStops"), p = He("gradientColorStopPositions"), g = He("inset"), A = He("margin"), b = He("opacity"), v = He("padding"), w = He("saturate"), x = He("scale"), S = He("sepia"), q = He("skew"), C = He("space"), E = He("translate"), T = () => ["auto", "contain", "none"], R = () => ["auto", "hidden", "clip", "visible", "scroll"], k = () => ["auto", ce, e], D = () => [ce, e], N = () => ["", zn, us], F = () => ["auto", Br, ce], B = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], V = () => ["solid", "dashed", "dotted", "double", "none"], L = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], O = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], U = () => ["", "0", ce], H = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], _ = () => [Br, ce];
   return {
     cacheSize: 500,
     separator: ":",
@@ -2743,8 +2743,8 @@ const He = (t) => {
       gap: D(),
       gradientColorStops: [t],
       gradientColorStopPositions: [TS, us],
-      inset: R(),
-      margin: R(),
+      inset: k(),
+      margin: k(),
       opacity: _(),
       padding: D(),
       saturate: _(),
@@ -2853,21 +2853,21 @@ const He = (t) => {
        * @see https://tailwindcss.com/docs/overflow
        */
       overflow: [{
-        overflow: k()
+        overflow: R()
       }],
       /**
        * Overflow X
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-x": [{
-        "overflow-x": k()
+        "overflow-x": R()
       }],
       /**
        * Overflow Y
        * @see https://tailwindcss.com/docs/overflow
        */
       "overflow-y": [{
-        "overflow-y": k()
+        "overflow-y": R()
       }],
       /**
        * Overscroll Behavior
@@ -2976,7 +2976,7 @@ const He = (t) => {
        * @see https://tailwindcss.com/docs/flex-basis
        */
       basis: [{
-        basis: R()
+        basis: k()
       }],
       /**
        * Flex Direction
@@ -7328,8 +7328,8 @@ function ip({ keyframes: t, velocity: e = 0, power: n = 0.8, timeConstant: s = 3
   const A = d + g, b = o === void 0 ? A : o(A);
   b !== A && (g = b - d);
   const v = (E) => -g * Math.exp(-E / s), w = (E) => b + v(E), x = (E) => {
-    const T = v(E), k = w(E);
-    f.done = Math.abs(T) <= c, f.value = f.done ? b : k;
+    const T = v(E), R = w(E);
+    f.done = Math.abs(T) <= c, f.value = f.done ? b : R;
   };
   let S, q;
   const C = (E) => {
@@ -7600,8 +7600,8 @@ class Vd extends j0 {
     let w = this.currentTime, x = i;
     if (h) {
       const E = Math.min(this.currentTime, u) / d;
-      let T = Math.floor(E), k = E % 1;
-      !k && E >= 1 && (k = 1), k === 1 && T--, T = Math.min(T, h + 1), !!(T % 2) && (p === "reverse" ? (k = 1 - k, g && (k -= g / d)) : p === "mirror" && (x = o)), w = Ss(0, 1, k) * d;
+      let T = Math.floor(E), R = E % 1;
+      !R && E >= 1 && (R = 1), R === 1 && T--, T = Math.min(T, h + 1), !!(T % 2) && (p === "reverse" ? (R = 1 - R, g && (R -= g / d)) : p === "mirror" && (x = o)), w = Ss(0, 1, R) * d;
     }
     const S = v ? { done: !1, value: l[0] } : x.next(w);
     a && (S.value = a(S.value));
@@ -8425,25 +8425,25 @@ function bq(t) {
       let E = C || // If we're making this variant active, we want to always make it active
       b === l && v.isActive && !q && x || // If we removed a higher-priority variant (i is in reverse order)
       A > p && x, T = !1;
-      const k = Array.isArray(w) ? w : [w];
-      let R = k.reduce(r(b), {});
-      S === !1 && (R = {});
+      const R = Array.isArray(w) ? w : [w];
+      let k = R.reduce(r(b), {});
+      S === !1 && (k = {});
       const { prevResolvedValues: D = {} } = v, N = {
         ...D,
-        ...R
+        ...k
       }, F = (L) => {
         E = !0, f.has(L) && (T = !0, f.delete(L)), v.needsAnimating[L] = !0;
         const O = t.getValue(L);
         O && (O.liveStyle = !1);
       };
       for (const L in N) {
-        const O = R[L], U = D[L];
+        const O = k[L], U = D[L];
         if (h.hasOwnProperty(L))
           continue;
         let H = !1;
         mu(O) && mu(U) ? H = !u0(O, U) : H = O !== U, H ? O != null ? F(L) : f.add(L) : O !== void 0 && f.has(L) ? F(L) : v.protectedKeys[L] = !0;
       }
-      v.prevProp = w, v.prevResolvedValues = R, v.isActive && (h = { ...h, ...R }), s && t.blockInitialAnimation && (E = !1), E && (!(q && C) || T) && d.push(...k.map((L) => ({
+      v.prevProp = w, v.prevResolvedValues = k, v.isActive && (h = { ...h, ...k }), s && t.blockInitialAnimation && (E = !1), E && (!(q && C) || T) && d.push(...R.map((L) => ({
         animation: L,
         options: { type: b }
       })));
@@ -15468,47 +15468,47 @@ function hv({
   betRanges: l,
   showFiat: c
 }) {
-  const u = mt(null), d = De((k) => {
-    const R = n.crypto && s && c ? s : n;
-    return k.toFixed(R.fractionalDigits);
-  }, [n, s, c]), f = De((k) => ts.convertCurrency(
-    k,
+  const u = mt(null), d = De((R) => {
+    const k = n.crypto && s && c ? s : n;
+    return R.toFixed(k.fractionalDigits);
+  }, [n, s, c]), f = De((R) => ts.convertCurrency(
+    R,
     n.currencyCode,
     (s == null ? void 0 : s.code) || "",
     r
-  ), [n, s, r]), h = De((k) => ts.reverseConvertCurrency(
-    k,
+  ), [n, s, r]), h = De((R) => ts.reverseConvertCurrency(
+    R,
     (s == null ? void 0 : s.code) || "",
     n.currencyCode,
     r
   ), [n, s, r]), [p, g] = tt(() => {
-    const k = Math.max(t, Number(l.minBet));
-    return d(k);
+    const R = Math.max(t, Number(l.minBet));
+    return d(R);
   }), [A, b] = tt(!1);
   Oe(() => {
-    if (i) {
-      g(d(0));
-      return;
+    const R = Number(p);
+    g(d(R));
+  }, [n, t, i, l.minBet, f, d, c, s, p]), Oe(() => {
+    if (!i && u.current) {
+      u.current.focus();
+      const R = Number(l.minBet), k = n.crypto && s && c ? f(R) : R;
+      g(d(k));
     }
-    const k = Number(l.minBet), R = Number(p), D = n.crypto && s && c ? f(k) : k;
-    R > D ? g(d(R)) : g(d(D));
-  }, [n, t, i, l.minBet, f, d, c, s]), Oe(() => {
-    !i && u.current && u.current.focus();
   }, [i]);
-  const v = (k) => {
-    g(k.target.value);
+  const v = (R) => {
+    g(R.target.value);
   }, w = () => {
-    const k = Math.max(parseFloat(p), Number(l.minBet));
-    isNaN(k) || (e(k), g(d(k))), b(!1);
-  }, x = (k) => {
-    const R = Number(p) * k;
-    e(R), g(d(R));
+    const R = Math.max(parseFloat(p));
+    isNaN(R) || (e(R), g(d(R))), b(!1);
+  }, x = (R) => {
+    const k = Number(p) * R;
+    e(k), g(d(k));
   }, S = `
     flex items-center space-x-2 bg-primary rounded-md p-1 h-11 transition-all duration-200
     ${A ? "ring-1 ring-brand" : ""}
   `, q = "flex-grow bg-transparent border-none text-white text-base h-9 outline-none focus-visible:ring-0 focus-visible:ring-offset-0", C = "h-9 w-16 px-2 text-sm bg-pills text-white hover:bg-opacity-80 font-bold", E = n.crypto && s && c ? s.postfixSymbol || s.prefixSymbol : n.prefixSymbol, T = De(() => {
-    const k = n.crypto && s && c ? s.fractionalDigits : n.fractionalDigits;
-    return k <= 0 ? "1" : `0.${"0".repeat(k - 1)}1`;
+    const R = n.crypto && s && c ? s.fractionalDigits : n.fractionalDigits;
+    return R <= 0 ? "1" : `0.${"0".repeat(R - 1)}1`;
   }, [n, s, c]);
   return /* @__PURE__ */ m.jsxs("div", { className: "space-y-2", children: [
     /* @__PURE__ */ m.jsxs(pt, { htmlFor: "betAmount", className: "text-sm text-gray-400 flex justify-between", children: [
@@ -15592,7 +15592,7 @@ function zk({ handleStartGame: t }) {
     coinSide: q,
     errors: C,
     validateSettings: E
-  } = Da(), [T, k] = tt(null), R = (H, _, ve = !1) => {
+  } = Da(), [T, R] = tt(null), k = (H, _, ve = !1) => {
     ve && Wt("tick"), f({ [H]: _ });
   }, D = () => {
     i ? (a(!1), l(!0)) : E() && t();
@@ -15610,7 +15610,7 @@ function zk({ handleStartGame: t }) {
           /* @__PURE__ */ m.jsx(
             "button",
             {
-              onClick: () => R("mode", "manual", !0),
+              onClick: () => k("mode", "manual", !0),
               disabled: e && h !== "manual",
               className: `flex-1 py-2 px-4 text-sm font-bold rounded-md transition-all ${h === "manual" ? "bg-brand text-brand-cta-text" : "text-gray-400 hover:text-white"}`,
               children: dt("blink.common.manual")
@@ -15619,7 +15619,7 @@ function zk({ handleStartGame: t }) {
           /* @__PURE__ */ m.jsx(
             "button",
             {
-              onClick: () => R("mode", "auto", !0),
+              onClick: () => k("mode", "auto", !0),
               disabled: e && h !== "auto",
               className: `flex-1 py-2 px-4 text-sm font-bold rounded-md transition-all ${h === "auto" ? "bg-brand text-brand-cta-text" : "text-gray-400 hover:text-white"}`,
               children: dt("blink.common.auto")
@@ -15636,7 +15636,7 @@ function zk({ handleStartGame: t }) {
           hv,
           {
             betAmount: p,
-            onBetAmountChange: (H) => R("betAmount", H),
+            onBetAmountChange: (H) => k("betAmount", H),
             selectedCurrency: n,
             selectedFiatCurrency: s,
             fiatConversionRates: u,
@@ -15655,7 +15655,7 @@ function zk({ handleStartGame: t }) {
         /* @__PURE__ */ m.jsx(
           "button",
           {
-            onClick: () => R("coinSide", "HEADS", !0),
+            onClick: () => k("coinSide", "HEADS", !0),
             className: `${O} ${q === "HEADS" ? "bg-pills text-white" : "text-gray-400"}`,
             children: dt("blink.cointoss.heads")
           }
@@ -15663,7 +15663,7 @@ function zk({ handleStartGame: t }) {
         /* @__PURE__ */ m.jsx(
           "button",
           {
-            onClick: () => R("coinSide", "EDGE", !0),
+            onClick: () => k("coinSide", "EDGE", !0),
             className: `${O} ${q === "EDGE" ? "bg-pills text-white" : "text-gray-400"}`,
             children: dt("blink.cointoss.edge")
           }
@@ -15671,7 +15671,7 @@ function zk({ handleStartGame: t }) {
         /* @__PURE__ */ m.jsx(
           "button",
           {
-            onClick: () => R("coinSide", "TAILS", !0),
+            onClick: () => k("coinSide", "TAILS", !0),
             className: `${O} ${q === "TAILS" ? "bg-pills text-white" : "text-gray-400"}`,
             children: dt("blink.cointoss.tails")
           }
@@ -15699,9 +15699,9 @@ function zk({ handleStartGame: t }) {
                     {
                       id: "numberOfBets",
                       value: b,
-                      onChange: (H) => R("numberOfBets", H.target.value, !1),
-                      onFocus: () => k("numberOfBets"),
-                      onBlur: () => k(null),
+                      onChange: (H) => k("numberOfBets", H.target.value, !1),
+                      onFocus: () => R("numberOfBets"),
+                      onBlur: () => R(null),
                       className: B
                     }
                   ),
@@ -15709,7 +15709,7 @@ function zk({ handleStartGame: t }) {
                     xt,
                     {
                       variant: b === H ? "secondary" : "ghost",
-                      onClick: () => R("numberOfBets", H, !0),
+                      onClick: () => k("numberOfBets", H, !0),
                       className: V,
                       children: H
                     },
@@ -15735,7 +15735,7 @@ function zk({ handleStartGame: t }) {
                     /* @__PURE__ */ m.jsx(
                       "button",
                       {
-                        onClick: () => R("onWinMode", "reset", !0),
+                        onClick: () => k("onWinMode", "reset", !0),
                         className: `${O} ${v === "reset" ? "bg-pills text-white" : "text-gray-400"}`,
                         children: dt("blink.common.reset")
                       }
@@ -15743,7 +15743,7 @@ function zk({ handleStartGame: t }) {
                     /* @__PURE__ */ m.jsx(
                       "button",
                       {
-                        onClick: () => R("onWinMode", "increase", !0),
+                        onClick: () => k("onWinMode", "increase", !0),
                         className: `${O} ${v === "increase" ? "bg-pills text-white" : "text-gray-400"}`,
                         children: dt("blink.common.increaseBy")
                       }
@@ -15759,12 +15759,12 @@ function zk({ handleStartGame: t }) {
                           {
                             type: "number",
                             value: x,
-                            onChange: (H) => R(
+                            onChange: (H) => k(
                               "onWinValue",
                               parseFloat(H.target.value)
                             ),
-                            onFocus: () => k("onWinValue"),
-                            onBlur: () => k(null),
+                            onFocus: () => R("onWinValue"),
+                            onBlur: () => R(null),
                             className: B,
                             disabled: v === "reset",
                             style: {
@@ -15797,7 +15797,7 @@ function zk({ handleStartGame: t }) {
                     /* @__PURE__ */ m.jsx(
                       "button",
                       {
-                        onClick: () => R("onLossMode", "reset", !0),
+                        onClick: () => k("onLossMode", "reset", !0),
                         className: `${O} ${w === "reset" ? "bg-pills text-white" : "text-gray-400"}`,
                         children: dt("blink.common.reset")
                       }
@@ -15805,7 +15805,7 @@ function zk({ handleStartGame: t }) {
                     /* @__PURE__ */ m.jsx(
                       "button",
                       {
-                        onClick: () => R("onLossMode", "increase", !0),
+                        onClick: () => k("onLossMode", "increase", !0),
                         className: `${O} ${w === "increase" ? "bg-pills text-white" : "text-gray-400"}`,
                         children: dt("blink.common.increaseBy")
                       }
@@ -15821,12 +15821,12 @@ function zk({ handleStartGame: t }) {
                           {
                             type: "number",
                             value: S,
-                            onChange: (H) => R(
+                            onChange: (H) => k(
                               "onLossValue",
                               parseFloat(H.target.value)
                             ),
-                            onFocus: () => k("onLossValue"),
-                            onBlur: () => k(null),
+                            onFocus: () => R("onLossValue"),
+                            onBlur: () => R(null),
                             className: B,
                             disabled: w === "reset",
                             style: {
@@ -15852,9 +15852,9 @@ function zk({ handleStartGame: t }) {
                 id: "stopOnWin",
                 type: "number",
                 value: g,
-                onChange: (H) => R("stopOnWin", parseFloat(H.target.value)),
-                onFocus: () => k("stopOnWin"),
-                onBlur: () => k(null),
+                onChange: (H) => k("stopOnWin", parseFloat(H.target.value)),
+                onFocus: () => R("stopOnWin"),
+                onBlur: () => R(null),
                 className: B,
                 style: {
                   WebkitAppearance: "none",
@@ -15871,12 +15871,12 @@ function zk({ handleStartGame: t }) {
                 id: "stopOnLoss",
                 type: "number",
                 value: A,
-                onChange: (H) => R(
+                onChange: (H) => k(
                   "stopOnLoss",
                   parseFloat(H.target.value)
                 ),
-                onFocus: () => k("stopOnLoss"),
-                onBlur: () => k(null),
+                onFocus: () => R("stopOnLoss"),
+                onBlur: () => R(null),
                 className: B,
                 style: {
                   WebkitAppearance: "none",
@@ -16037,11 +16037,11 @@ var Xk = "DismissableLayer", Iu = "dismissableLayer.update", Gk = "dismissableLa
       onDismiss: a,
       ...l
     } = t, c = y.useContext(gv), [u, d] = y.useState(null), f = (u == null ? void 0 : u.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), [, h] = y.useState({}), p = Ee(e, (C) => d(C)), g = Array.from(c.layers), [A] = [...c.layersWithOutsidePointerEventsDisabled].slice(-1), b = g.indexOf(A), v = u ? g.indexOf(u) : -1, w = c.layersWithOutsidePointerEventsDisabled.size > 0, x = v >= b, S = $k((C) => {
-      const E = C.target, T = [...c.branches].some((k) => k.contains(E));
+      const E = C.target, T = [...c.branches].some((R) => R.contains(E));
       !x || T || (r == null || r(C), o == null || o(C), C.defaultPrevented || a == null || a());
     }, f), q = eM((C) => {
       const E = C.target;
-      [...c.branches].some((k) => k.contains(E)) || (i == null || i(C), o == null || o(C), C.defaultPrevented || a == null || a());
+      [...c.branches].some((R) => R.contains(E)) || (i == null || i(C), o == null || o(C), C.defaultPrevented || a == null || a());
     }, f);
     return pv((C) => {
       v === c.layers.size - 1 && (s == null || s(C), !C.defaultPrevented && a && (C.preventDefault(), a()));
@@ -17553,13 +17553,13 @@ function OD({ activeSnapPointProp: t, setActiveSnapPointProp: e, snapPoints: n, 
     };
     var E;
     return (E = n == null ? void 0 : n.map((T) => {
-      const k = typeof T == "string";
-      let R = 0;
-      if (k && (R = parseInt(T, 10)), ht(a)) {
-        const N = k ? R : f ? T * C.height : 0;
+      const R = typeof T == "string";
+      let k = 0;
+      if (R && (k = parseInt(T, 10)), ht(a)) {
+        const N = R ? k : f ? T * C.height : 0;
         return f ? a === "bottom" ? C.height - N : -C.height + N : N;
       }
-      const D = k ? R : f ? T * C.width : 0;
+      const D = R ? k : f ? T * C.width : 0;
       return f ? a === "right" ? C.width - D : -C.width + D : D;
     })) != null ? E : [];
   }, [
@@ -17571,7 +17571,7 @@ function OD({ activeSnapPointProp: t, setActiveSnapPointProp: e, snapPoints: n, 
     g
   ]), w = z.useCallback((C) => {
     var E;
-    const T = (E = b == null ? void 0 : b.findIndex((k) => k === C)) != null ? E : null;
+    const T = (E = b == null ? void 0 : b.findIndex((R) => R === C)) != null ? E : null;
     o(T), ft(s.current, {
       transition: `transform ${Ge.DURATION}s cubic-bezier(${Ge.EASE.join(",")})`,
       transform: ht(a) ? `translate3d(0, ${C}px, 0)` : `translate3d(${C}px, 0, 0)`
@@ -17603,27 +17603,27 @@ function OD({ activeSnapPointProp: t, setActiveSnapPointProp: e, snapPoints: n, 
     b,
     w
   ]);
-  function x({ draggedDistance: C, closeDrawer: E, velocity: T, dismissible: k }) {
+  function x({ draggedDistance: C, closeDrawer: E, velocity: T, dismissible: R }) {
     if (i === void 0) return;
-    const R = a === "bottom" || a === "right" ? (v ?? 0) - C : (v ?? 0) + C, D = g === i - 1, N = g === 0, F = C > 0;
+    const k = a === "bottom" || a === "right" ? (v ?? 0) - C : (v ?? 0) + C, D = g === i - 1, N = g === 0, F = C > 0;
     if (D && ft(r.current, {
       transition: `opacity ${Ge.DURATION}s cubic-bezier(${Ge.EASE.join(",")})`
     }), !c && T > 2 && !F) {
-      k ? E() : w(b[0]);
+      R ? E() : w(b[0]);
       return;
     }
     if (!c && T > 2 && F && b && n) {
       w(b[n.length - 1]);
       return;
     }
-    const B = b == null ? void 0 : b.reduce((L, O) => typeof L != "number" || typeof O != "number" ? L : Math.abs(O - R) < Math.abs(L - R) ? O : L), V = ht(a) ? window.innerHeight : window.innerWidth;
+    const B = b == null ? void 0 : b.reduce((L, O) => typeof L != "number" || typeof O != "number" ? L : Math.abs(O - k) < Math.abs(L - k) ? O : L), V = ht(a) ? window.innerHeight : window.innerWidth;
     if (T > sy && Math.abs(C) < V * 0.4) {
       const L = F ? 1 : -1;
       if (L > 0 && p) {
         w(b[n.length - 1]);
         return;
       }
-      if (N && L < 0 && k && E(), g === null) return;
+      if (N && L < 0 && R && E(), g === null) return;
       w(b[g + L]);
       return;
     }
@@ -17643,7 +17643,7 @@ function OD({ activeSnapPointProp: t, setActiveSnapPointProp: e, snapPoints: n, 
       return 0;
     if (T && !E) return 1;
     if (!A && !T) return null;
-    const R = T ? g + 1 : g - 1, D = T ? b[R] - b[R - 1] : b[R + 1] - b[R], N = C / Math.abs(D);
+    const k = T ? g + 1 : g - 1, D = T ? b[k] - b[k - 1] : b[k + 1] - b[k], N = C / Math.abs(D);
     return T ? 1 - N : N;
   }
   return {
@@ -17760,14 +17760,14 @@ function jD({ isOpen: t, modal: e, nested: n, hasBeenOpened: s, preventScrollRes
     restorePositionSetting: u
   };
 }
-function ay({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, snapPoints: i, shouldScaleBackground: o = !1, setBackgroundColorOnScale: a = !0, closeThreshold: l = kD, scrollLockTimeout: c = MD, dismissible: u = !0, handleOnly: d = !1, fadeFromIndex: f = i && i.length - 1, activeSnapPoint: h, setActiveSnapPoint: p, fixed: g, modal: A = !0, onClose: b, nested: v, noBodyStyles: w, direction: x = "bottom", defaultOpen: S = !1, disablePreventScroll: q = !0, snapToSequentialPoint: C = !1, preventScrollRestoration: E = !1, repositionInputs: T = !0, onAnimationEnd: k, container: R, autoFocus: D = !1 }) {
+function ay({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, snapPoints: i, shouldScaleBackground: o = !1, setBackgroundColorOnScale: a = !0, closeThreshold: l = kD, scrollLockTimeout: c = MD, dismissible: u = !0, handleOnly: d = !1, fadeFromIndex: f = i && i.length - 1, activeSnapPoint: h, setActiveSnapPoint: p, fixed: g, modal: A = !0, onClose: b, nested: v, noBodyStyles: w, direction: x = "bottom", defaultOpen: S = !1, disablePreventScroll: q = !0, snapToSequentialPoint: C = !1, preventScrollRestoration: E = !1, repositionInputs: T = !0, onAnimationEnd: R, container: k, autoFocus: D = !1 }) {
   var N, F;
   const [B = !1, V] = oy({
     defaultProp: S,
     prop: t,
     onChange: ($) => {
       e == null || e($), !$ && !v && yr(), setTimeout(() => {
-        k == null || k($);
+        R == null || R($);
       }, Ge.DURATION * 1e3), $ && !A && typeof window < "u" && window.requestAnimationFrame(() => {
         document.body.style.pointerEvents = "auto";
       }), $ || (document.body.style.pointerEvents = "auto");
@@ -17783,7 +17783,7 @@ function ay({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
     overlayRef: we,
     onSnapPointChange: Kt,
     direction: x,
-    container: R,
+    container: k,
     snapToSequentialPoint: C
   });
   wD({
@@ -18043,7 +18043,7 @@ function ay({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
       shouldScaleBackground: o,
       setBackgroundColorOnScale: a,
       noBodyStyles: w,
-      container: R,
+      container: k,
       autoFocus: D
     }
   }, n));
@@ -18065,16 +18065,16 @@ ly.displayName = "Drawer.Overlay";
 const cy = /* @__PURE__ */ z.forwardRef(function({ onPointerDownOutside: t, style: e, onOpenAutoFocus: n, ...s }, r) {
   const { drawerRef: i, onPress: o, onRelease: a, onDrag: l, keyboardIsOpen: c, snapPointsOffset: u, modal: d, isOpen: f, direction: h, snapPoints: p, container: g, handleOnly: A, autoFocus: b } = hi(), [v, w] = z.useState(!1), x = ty(r, i), S = z.useRef(null), q = z.useRef(null), C = z.useRef(!1), E = p && p.length > 0;
   ND();
-  const T = (R, D, N = 0) => {
+  const T = (k, D, N = 0) => {
     if (C.current) return !0;
-    const F = Math.abs(R.y), B = Math.abs(R.x), V = B > F, L = [
+    const F = Math.abs(k.y), B = Math.abs(k.x), V = B > F, L = [
       "bottom",
       "right"
     ].includes(D) ? 1 : -1;
     if (D === "left" || D === "right") {
-      if (!(R.x * L < 0) && B >= 0 && B <= N)
+      if (!(k.x * L < 0) && B >= 0 && B <= N)
         return V;
-    } else if (!(R.y * L < 0) && F >= 0 && F <= N)
+    } else if (!(k.y * L < 0) && F >= 0 && F <= N)
       return !V;
     return C.current = !0, !0;
   };
@@ -18083,8 +18083,8 @@ const cy = /* @__PURE__ */ z.forwardRef(function({ onPointerDownOutside: t, styl
       w(!0);
     });
   }, []);
-  function k(R) {
-    S.current = null, C.current = !1, a(R);
+  function R(k) {
+    S.current = null, C.current = !1, a(k);
   }
   return /* @__PURE__ */ z.createElement(df, {
     "data-vaul-drawer-direction": h,
@@ -18098,44 +18098,44 @@ const cy = /* @__PURE__ */ z.forwardRef(function({ onPointerDownOutside: t, styl
       "--snap-point-height": `${u[0]}px`,
       ...e
     } : e,
-    onPointerDown: (R) => {
-      A || (s.onPointerDown == null || s.onPointerDown.call(s, R), S.current = {
-        x: R.pageX,
-        y: R.pageY
-      }, o(R));
+    onPointerDown: (k) => {
+      A || (s.onPointerDown == null || s.onPointerDown.call(s, k), S.current = {
+        x: k.pageX,
+        y: k.pageY
+      }, o(k));
     },
-    onOpenAutoFocus: (R) => {
-      n == null || n(R), b || R.preventDefault();
+    onOpenAutoFocus: (k) => {
+      n == null || n(k), b || k.preventDefault();
     },
-    onPointerDownOutside: (R) => {
-      if (t == null || t(R), !d || R.defaultPrevented) {
-        R.preventDefault();
+    onPointerDownOutside: (k) => {
+      if (t == null || t(k), !d || k.defaultPrevented) {
+        k.preventDefault();
         return;
       }
       c.current && (c.current = !1);
     },
-    onFocusOutside: (R) => {
+    onFocusOutside: (k) => {
       if (!d) {
-        R.preventDefault();
+        k.preventDefault();
         return;
       }
     },
-    onPointerMove: (R) => {
-      if (q.current = R, A || (s.onPointerMove == null || s.onPointerMove.call(s, R), !S.current)) return;
-      const D = R.pageY - S.current.y, N = R.pageX - S.current.x, F = R.pointerType === "touch" ? 10 : 2;
+    onPointerMove: (k) => {
+      if (q.current = k, A || (s.onPointerMove == null || s.onPointerMove.call(s, k), !S.current)) return;
+      const D = k.pageY - S.current.y, N = k.pageX - S.current.x, F = k.pointerType === "touch" ? 10 : 2;
       T({
         x: N,
         y: D
-      }, h, F) ? l(R) : (Math.abs(N) > F || Math.abs(D) > F) && (S.current = null);
+      }, h, F) ? l(k) : (Math.abs(N) > F || Math.abs(D) > F) && (S.current = null);
     },
-    onPointerUp: (R) => {
-      s.onPointerUp == null || s.onPointerUp.call(s, R), S.current = null, C.current = !1, a(R);
+    onPointerUp: (k) => {
+      s.onPointerUp == null || s.onPointerUp.call(s, k), S.current = null, C.current = !1, a(k);
     },
-    onPointerOut: (R) => {
-      s.onPointerOut == null || s.onPointerOut.call(s, R), k(q.current);
+    onPointerOut: (k) => {
+      s.onPointerOut == null || s.onPointerOut.call(s, k), R(q.current);
     },
-    onContextMenu: (R) => {
-      s.onContextMenu == null || s.onContextMenu.call(s, R), k(q.current);
+    onContextMenu: (k) => {
+      s.onContextMenu == null || s.onContextMenu.call(s, k), R(q.current);
     }
   });
 });
@@ -18448,13 +18448,13 @@ var Ef = "ScrollArea", [py, x5] = QD(Ef), [GD, dn] = py(Ef), gy = y.forwardRef(
       dir: r,
       scrollHideDelay: i = 600,
       ...o
-    } = t, [a, l] = y.useState(null), [c, u] = y.useState(null), [d, f] = y.useState(null), [h, p] = y.useState(null), [g, A] = y.useState(null), [b, v] = y.useState(0), [w, x] = y.useState(0), [S, q] = y.useState(!1), [C, E] = y.useState(!1), T = Ee(e, (R) => l(R)), k = Pf(r);
+    } = t, [a, l] = y.useState(null), [c, u] = y.useState(null), [d, f] = y.useState(null), [h, p] = y.useState(null), [g, A] = y.useState(null), [b, v] = y.useState(0), [w, x] = y.useState(0), [S, q] = y.useState(!1), [C, E] = y.useState(!1), T = Ee(e, (k) => l(k)), R = Pf(r);
     return /* @__PURE__ */ m.jsx(
       GD,
       {
         scope: n,
         type: s,
-        dir: k,
+        dir: R,
         scrollHideDelay: i,
         scrollArea: a,
         viewport: c,
@@ -18474,7 +18474,7 @@ var Ef = "ScrollArea", [py, x5] = QD(Ef), [GD, dn] = py(Ef), gy = y.forwardRef(
         children: /* @__PURE__ */ m.jsx(
           Te.div,
           {
-            dir: k,
+            dir: R,
             ...o,
             ref: T,
             style: {
@@ -18799,14 +18799,14 @@ var ZD = y.forwardRef((t, e) => {
   } = t, h = dn(Bn, n), [p, g] = y.useState(null), A = Ee(e, (T) => g(T)), b = y.useRef(null), v = y.useRef(""), w = h.viewport, x = s.content - s.viewport, S = St(u), q = St(l), C = Jl(d, 10);
   function E(T) {
     if (b.current) {
-      const k = T.clientX - b.current.left, R = T.clientY - b.current.top;
-      c({ x: k, y: R });
+      const R = T.clientX - b.current.left, k = T.clientY - b.current.top;
+      c({ x: R, y: k });
     }
   }
   return y.useEffect(() => {
-    const T = (k) => {
-      const R = k.target;
-      (p == null ? void 0 : p.contains(R)) && S(k, x);
+    const T = (R) => {
+      const k = R.target;
+      (p == null ? void 0 : p.contains(k)) && S(R, x);
     };
     return document.addEventListener("wheel", T, { passive: !1 }), () => document.removeEventListener("wheel", T, { passive: !1 });
   }, [w, p, x, S]), y.useEffect(q, [s, q]), Jr(p, C), Jr(h.content, C), /* @__PURE__ */ m.jsx(
@@ -18830,8 +18830,8 @@ var ZD = y.forwardRef((t, e) => {
           }),
           onPointerMove: Ce(t.onPointerMove, E),
           onPointerUp: Ce(t.onPointerUp, (T) => {
-            const k = T.target;
-            k.hasPointerCapture(T.pointerId) && k.releasePointerCapture(T.pointerId), document.body.style.webkitUserSelect = v.current, h.viewport && (h.viewport.style.scrollBehavior = ""), b.current = null;
+            const R = T.target;
+            R.hasPointerCapture(T.pointerId) && R.releasePointerCapture(T.pointerId), document.body.style.webkitUserSelect = v.current, h.viewport && (h.viewport.style.scrollBehavior = ""), b.current = null;
           })
         }
       )
@@ -19620,8 +19620,8 @@ var [jy, q3] = $l(os), [By, E3] = $l(
       var E;
       if (!S3.includes(h.key)) return;
       const p = h.target, g = c().filter((T) => {
-        var k;
-        return !((k = T.ref.current) != null && k.disabled);
+        var R;
+        return !((R = T.ref.current) != null && R.disabled);
       }), A = g.findIndex((T) => T.ref.current === p), b = g.length;
       if (A === -1) return;
       h.preventDefault();
@@ -19941,11 +19941,11 @@ var B3 = "DismissableLayer", Hu = "dismissableLayer.update", I3 = "dismissableLa
       onDismiss: a,
       ...l
     } = t, c = y.useContext(Gy), [u, d] = y.useState(null), f = (u == null ? void 0 : u.ownerDocument) ?? (globalThis == null ? void 0 : globalThis.document), [, h] = y.useState({}), p = Ee(e, (C) => d(C)), g = Array.from(c.layers), [A] = [...c.layersWithOutsidePointerEventsDisabled].slice(-1), b = g.indexOf(A), v = u ? g.indexOf(u) : -1, w = c.layersWithOutsidePointerEventsDisabled.size > 0, x = v >= b, S = U3((C) => {
-      const E = C.target, T = [...c.branches].some((k) => k.contains(E));
+      const E = C.target, T = [...c.branches].some((R) => R.contains(E));
       !x || T || (r == null || r(C), o == null || o(C), C.defaultPrevented || a == null || a());
     }, f), q = W3((C) => {
       const E = C.target;
-      [...c.branches].some((k) => k.contains(E)) || (i == null || i(C), o == null || o(C), C.defaultPrevented || a == null || a());
+      [...c.branches].some((R) => R.contains(E)) || (i == null || i(C), o == null || o(C), C.defaultPrevented || a == null || a());
     }, f);
     return pv((C) => {
       v === c.layers.size - 1 && (s == null || s(C), !C.defaultPrevented && a && (C.preventDefault(), a()));
@@ -20325,7 +20325,7 @@ const $3 = (t) => ({
     }, h = zf(r), p = Vf(h), g = await o.getDimensions(c), A = h === "y", b = A ? "top" : "left", v = A ? "bottom" : "right", w = A ? "clientHeight" : "clientWidth", x = i.reference[p] + i.reference[h] - f[h] - i.floating[p], S = f[h] - i.reference[h], q = await (o.getOffsetParent == null ? void 0 : o.getOffsetParent(c));
     let C = q ? q[w] : 0;
     (!C || !await (o.isElement == null ? void 0 : o.isElement(q))) && (C = a.floating[w] || i.floating[p]);
-    const E = x / 2 - S / 2, T = C / 2 - g[p] / 2 - 1, k = Rs(d[b], T), R = Rs(d[v], T), D = k, N = C - g[p] - R, F = C / 2 - g[p] / 2 + E, B = Qu(D, F, N), V = !l.arrow && pi(r) != null && F !== B && i.reference[p] / 2 - (F < D ? k : R) - g[p] / 2 < 0, L = V ? F < D ? F - D : F - N : 0;
+    const E = x / 2 - S / 2, T = C / 2 - g[p] / 2 - 1, R = Rs(d[b], T), k = Rs(d[v], T), D = R, N = C - g[p] - k, F = C / 2 - g[p] / 2 + E, B = Qu(D, F, N), V = !l.arrow && pi(r) != null && F !== B && i.reference[p] / 2 - (F < D ? R : k) - g[p] / 2 < 0, L = V ? F < D ? F - D : F - N : 0;
     return {
       [h]: f[h] + L,
       data: {
@@ -20365,33 +20365,33 @@ const $3 = (t) => ({
       const b = is(r), v = Ms(a), w = is(a) === a, x = await (l.isRTL == null ? void 0 : l.isRTL(c.floating)), S = f || (w || !g ? [wl(a)] : X3(a)), q = p !== "none";
       !f && q && S.push(...Z3(a, g, p, x));
       const C = [a, ...S], E = await wo(e, A), T = [];
-      let k = ((s = i.flip) == null ? void 0 : s.overflows) || [];
+      let R = ((s = i.flip) == null ? void 0 : s.overflows) || [];
       if (u && T.push(E[b]), d) {
         const F = K3(r, o, x);
         T.push(E[F[0]], E[F[1]]);
       }
-      if (k = [...k, {
+      if (R = [...R, {
         placement: r,
         overflows: T
       }], !T.every((F) => F <= 0)) {
-        var R, D;
-        const F = (((R = i.flip) == null ? void 0 : R.index) || 0) + 1, B = C[F];
+        var k, D;
+        const F = (((k = i.flip) == null ? void 0 : k.index) || 0) + 1, B = C[F];
         if (B)
           return {
             data: {
               index: F,
-              overflows: k
+              overflows: R
             },
             reset: {
               placement: B
             }
           };
-        let V = (D = k.filter((L) => L.overflows[0] <= 0).sort((L, O) => L.overflows[1] - O.overflows[1])[0]) == null ? void 0 : D.placement;
+        let V = (D = R.filter((L) => L.overflows[0] <= 0).sort((L, O) => L.overflows[1] - O.overflows[1])[0]) == null ? void 0 : D.placement;
         if (!V)
           switch (h) {
             case "bestFit": {
               var N;
-              const L = (N = k.filter((O) => {
+              const L = (N = R.filter((O) => {
                 if (q) {
                   const U = Ms(O.placement);
                   return U === v || // Create a bias to the `y` side axis due to horizontal
@@ -20642,8 +20642,8 @@ const sO = function(t) {
       const v = g - u.top - u.bottom, w = p - u.left - u.right, x = Rs(g - u[A], v), S = Rs(p - u[b], w), q = !e.middlewareData.shift;
       let C = x, E = S;
       if ((n = e.middlewareData.shift) != null && n.enabled.x && (E = w), (s = e.middlewareData.shift) != null && s.enabled.y && (C = v), q && !f) {
-        const k = _t(u.left, 0), R = _t(u.right, 0), D = _t(u.top, 0), N = _t(u.bottom, 0);
-        h ? E = p - 2 * (k !== 0 || R !== 0 ? k + R : _t(u.left, u.right)) : C = g - 2 * (D !== 0 || N !== 0 ? D + N : _t(u.top, u.bottom));
+        const R = _t(u.left, 0), k = _t(u.right, 0), D = _t(u.top, 0), N = _t(u.bottom, 0);
+        h ? E = p - 2 * (R !== 0 || k !== 0 ? R + k : _t(u.left, u.right)) : C = g - 2 * (D !== 0 || N !== 0 ? D + N : _t(u.top, u.bottom));
       }
       await l({
         ...e,
@@ -21208,7 +21208,7 @@ function DO(t) {
     O !== q.current && (q.current = O, g(O));
   }, []), w = y.useCallback((O) => {
     O !== C.current && (C.current = O, b(O));
-  }, []), x = i || p, S = o || A, q = y.useRef(null), C = y.useRef(null), E = y.useRef(u), T = l != null, k = Xc(l), R = Xc(r), D = Xc(c), N = y.useCallback(() => {
+  }, []), x = i || p, S = o || A, q = y.useRef(null), C = y.useRef(null), E = y.useRef(u), T = l != null, R = Xc(l), k = Xc(r), D = Xc(c), N = y.useCallback(() => {
     if (!q.current || !C.current)
       return;
     const O = {
@@ -21216,7 +21216,7 @@ function DO(t) {
       strategy: n,
       middleware: f
     };
-    R.current && (O.platform = R.current), MO(q.current, C.current, O).then((U) => {
+    k.current && (O.platform = k.current), MO(q.current, C.current, O).then((U) => {
       const H = {
         ...U,
         // The floating element's position may be recomputed while it's closed
@@ -21229,7 +21229,7 @@ function DO(t) {
         d(H);
       }));
     });
-  }, [f, e, n, R, D]);
+  }, [f, e, n, k, D]);
   Ia(() => {
     c === !1 && E.current.isPositioned && (E.current.isPositioned = !1, d((O) => ({
       ...O,
@@ -21241,11 +21241,11 @@ function DO(t) {
     F.current = !1;
   }), []), Ia(() => {
     if (x && (q.current = x), S && (C.current = S), x && S) {
-      if (k.current)
-        return k.current(x, S, N);
+      if (R.current)
+        return R.current(x, S, N);
       N();
     }
-  }, [x, S, N, k, T]);
+  }, [x, S, N, R, T]);
   const B = y.useMemo(() => ({
     reference: q,
     floating: C,
@@ -21397,9 +21397,9 @@ var Yf = "PopperContent", [HO, QO] = lx(Yf), px = y.forwardRef(
       updatePositionStrategy: h = "optimized",
       onPlaced: p,
       ...g
-    } = t, A = ux(Yf, n), [b, v] = y.useState(null), w = Ee(e, (X) => v(X)), [x, S] = y.useState(null), q = ax(x), C = (q == null ? void 0 : q.width) ?? 0, E = (q == null ? void 0 : q.height) ?? 0, T = s + (i !== "center" ? "-" + i : ""), k = typeof u == "number" ? u : { top: 0, right: 0, bottom: 0, left: 0, ...u }, R = Array.isArray(c) ? c : [c], D = R.length > 0, N = {
-      padding: k,
-      boundary: R.filter(KO),
+    } = t, A = ux(Yf, n), [b, v] = y.useState(null), w = Ee(e, (X) => v(X)), [x, S] = y.useState(null), q = ax(x), C = (q == null ? void 0 : q.width) ?? 0, E = (q == null ? void 0 : q.height) ?? 0, T = s + (i !== "center" ? "-" + i : ""), R = typeof u == "number" ? u : { top: 0, right: 0, bottom: 0, left: 0, ...u }, k = Array.isArray(c) ? c : [c], D = k.length > 0, N = {
+      padding: R,
+      boundary: k.filter(KO),
       // with `strategy: 'fixed'`, this is the only way to get it to respect boundaries
       altBoundary: D
     }, { refs: F, floatingStyles: B, placement: V, isPositioned: L, middlewareData: O } = DO({
@@ -25292,8 +25292,8 @@ class za extends mn {
         C.skip = !0;
         continue;
       }
-      const E = this.getParsed(S), T = xe(E[h]), k = C[f] = o.getPixelForValue(E[f], S), R = C[h] = i || T ? a.getBasePixel() : a.getPixelForValue(l ? this.applyStack(a, E, l) : E[h], S);
-      C.skip = isNaN(k) || isNaN(R) || T, C.stop = S > 0 && Math.abs(E[f] - x[f]) > A, g && (C.parsed = E, C.raw = c.data[S]), d && (C.options = u || this.resolveDataElementOptions(S, q.active ? "active" : r)), b || this.updateElement(q, S, C, r), x = E;
+      const E = this.getParsed(S), T = xe(E[h]), R = C[f] = o.getPixelForValue(E[f], S), k = C[h] = i || T ? a.getBasePixel() : a.getPixelForValue(l ? this.applyStack(a, E, l) : E[h], S);
+      C.skip = isNaN(R) || isNaN(k) || T, C.stop = S > 0 && Math.abs(E[f] - x[f]) > A, g && (C.parsed = E, C.raw = c.data[S]), d && (C.options = u || this.resolveDataElementOptions(S, q.active ? "active" : r)), b || this.updateElement(q, S, C, r), x = E;
     }
   }
   getMaxOverflow() {
@@ -25553,8 +25553,8 @@ class Wa extends mn {
     const i = r === "reset", { iScale: o, vScale: a, _stacked: l, _dataset: c } = this._cachedMeta, u = this.resolveDataElementOptions(n, r), d = this.getSharedOptions(u), f = this.includeOptions(r, d), h = o.axis, p = a.axis, { spanGaps: g, segment: A } = this.options, b = ti(g) ? g : Number.POSITIVE_INFINITY, v = this.chart._animationsDisabled || i || r === "none";
     let w = n > 0 && this.getParsed(n - 1);
     for (let x = n; x < n + s; ++x) {
-      const S = e[x], q = this.getParsed(x), C = v ? S : {}, E = xe(q[p]), T = C[h] = o.getPixelForValue(q[h], x), k = C[p] = i || E ? a.getBasePixel() : a.getPixelForValue(l ? this.applyStack(a, q, l) : q[p], x);
-      C.skip = isNaN(T) || isNaN(k) || E, C.stop = x > 0 && Math.abs(q[h] - w[h]) > b, A && (C.parsed = q, C.raw = c.data[x]), f && (C.options = d || this.resolveDataElementOptions(x, S.active ? "active" : r)), v || this.updateElement(S, x, C, r), w = q;
+      const S = e[x], q = this.getParsed(x), C = v ? S : {}, E = xe(q[p]), T = C[h] = o.getPixelForValue(q[h], x), R = C[p] = i || E ? a.getBasePixel() : a.getPixelForValue(l ? this.applyStack(a, q, l) : q[p], x);
+      C.skip = isNaN(T) || isNaN(R) || E, C.stop = x > 0 && Math.abs(q[h] - w[h]) > b, A && (C.parsed = q, C.raw = c.data[x]), f && (C.options = d || this.resolveDataElementOptions(x, S.active ? "active" : r)), v || this.updateElement(S, x, C, r), w = q;
     }
     this.updateSharedOptions(d, r, u);
   }
@@ -26705,15 +26705,15 @@ class vr extends as {
     const n = this.axis, s = this.chart, r = this.options, { grid: i, position: o, border: a } = r, l = i.offset, c = this.isHorizontal(), d = this.ticks.length + (l ? 1 : 0), f = Mi(i), h = [], p = a.setContext(this.getContext()), g = p.display ? p.width : 0, A = g / 2, b = function(V) {
       return Hs(s, V, g);
     };
-    let v, w, x, S, q, C, E, T, k, R, D, N;
+    let v, w, x, S, q, C, E, T, R, k, D, N;
     if (o === "top")
-      v = b(this.bottom), C = this.bottom - f, T = v - A, R = b(e.top) + A, N = e.bottom;
+      v = b(this.bottom), C = this.bottom - f, T = v - A, k = b(e.top) + A, N = e.bottom;
     else if (o === "bottom")
-      v = b(this.top), R = e.top, N = b(e.bottom) - A, C = v + A, T = this.top + f;
+      v = b(this.top), k = e.top, N = b(e.bottom) - A, C = v + A, T = this.top + f;
     else if (o === "left")
-      v = b(this.right), q = this.right - f, E = v - A, k = b(e.left) + A, D = e.right;
+      v = b(this.right), q = this.right - f, E = v - A, R = b(e.left) + A, D = e.right;
     else if (o === "right")
-      v = b(this.left), k = e.left, D = b(e.right) - A, q = v + A, E = this.left + f;
+      v = b(this.left), R = e.left, D = b(e.right) - A, q = v + A, E = this.left + f;
     else if (n === "x") {
       if (o === "center")
         v = b((e.top + e.bottom) / 2 + 0.5);
@@ -26721,7 +26721,7 @@ class vr extends as {
         const V = Object.keys(o)[0], L = o[V];
         v = b(this.chart.scales[V].getPixelForValue(L));
       }
-      R = e.top, N = e.bottom, C = v + A, T = C + f;
+      k = e.top, N = e.bottom, C = v + A, T = C + f;
     } else if (n === "y") {
       if (o === "center")
         v = b((e.left + e.right) / 2);
@@ -26729,18 +26729,18 @@ class vr extends as {
         const V = Object.keys(o)[0], L = o[V];
         v = b(this.chart.scales[V].getPixelForValue(L));
       }
-      q = v - A, E = q - f, k = e.left, D = e.right;
+      q = v - A, E = q - f, R = e.left, D = e.right;
     }
     const F = ae(r.ticks.maxTicksLimit, d), B = Math.max(1, Math.ceil(d / F));
     for (w = 0; w < d; w += B) {
       const V = this.getContext(w), L = i.setContext(V), O = a.setContext(V), U = L.lineWidth, H = L.color, _ = O.dash || [], ve = O.dashOffset, we = L.tickWidth, je = L.tickColor, We = L.tickBorderDash || [], Be = L.tickBorderDashOffset;
-      x = mB(this, w, l), x !== void 0 && (S = Hs(s, x, U), c ? q = E = k = D = S : C = T = R = N = S, h.push({
+      x = mB(this, w, l), x !== void 0 && (S = Hs(s, x, U), c ? q = E = R = D = S : C = T = k = N = S, h.push({
         tx1: q,
         ty1: C,
         tx2: E,
         ty2: T,
-        x1: k,
-        y1: R,
+        x1: R,
+        y1: k,
         x2: D,
         y2: N,
         width: U,
@@ -26757,7 +26757,7 @@ class vr extends as {
   }
   _computeLabelItems(e) {
     const n = this.axis, s = this.options, { position: r, ticks: i } = s, o = this.isHorizontal(), a = this.ticks, { align: l, crossAlign: c, padding: u, mirror: d } = i, f = Mi(s.grid), h = f + u, p = d ? -u : h, g = -pn(this.labelRotation), A = [];
-    let b, v, w, x, S, q, C, E, T, k, R, D, N = "middle";
+    let b, v, w, x, S, q, C, E, T, R, k, D, N = "middle";
     if (r === "top")
       q = this.bottom - p, C = this._getXAxisLabelAlignment();
     else if (r === "bottom")
@@ -26790,10 +26790,10 @@ class vr extends as {
     for (b = 0, v = a.length; b < v; ++b) {
       w = a[b], x = w.label;
       const B = i.setContext(this.getContext(b));
-      E = this.getPixelForTick(b) + i.labelOffset, T = this._resolveTickFontOptions(b), k = T.lineHeight, R = Ke(x) ? x.length : 1;
-      const V = R / 2, L = B.color, O = B.textStrokeColor, U = B.textStrokeWidth;
+      E = this.getPixelForTick(b) + i.labelOffset, T = this._resolveTickFontOptions(b), R = T.lineHeight, k = Ke(x) ? x.length : 1;
+      const V = k / 2, L = B.color, O = B.textStrokeColor, U = B.textStrokeWidth;
       let H = C;
-      o ? (S = E, C === "inner" && (b === v - 1 ? H = this.options.reverse ? "left" : "right" : b === 0 ? H = this.options.reverse ? "right" : "left" : H = "center"), r === "top" ? c === "near" || g !== 0 ? D = -R * k + k / 2 : c === "center" ? D = -F.highest.height / 2 - V * k + k : D = -F.highest.height + k / 2 : c === "near" || g !== 0 ? D = k / 2 : c === "center" ? D = F.highest.height / 2 - V * k : D = F.highest.height - R * k, d && (D *= -1), g !== 0 && !B.showLabelBackdrop && (S += k / 2 * Math.sin(g))) : (q = E, D = (1 - R) * k / 2);
+      o ? (S = E, C === "inner" && (b === v - 1 ? H = this.options.reverse ? "left" : "right" : b === 0 ? H = this.options.reverse ? "right" : "left" : H = "center"), r === "top" ? c === "near" || g !== 0 ? D = -k * R + R / 2 : c === "center" ? D = -F.highest.height / 2 - V * R + R : D = -F.highest.height + R / 2 : c === "near" || g !== 0 ? D = R / 2 : c === "center" ? D = F.highest.height / 2 - V * R : D = F.highest.height - k * R, d && (D *= -1), g !== 0 && !B.showLabelBackdrop && (S += R / 2 * Math.sin(g))) : (q = E, D = (1 - k) * R / 2);
       let _;
       if (B.showLabelBackdrop) {
         const ve = Mt(B.backdropPadding), we = F.heights[b], je = F.widths[b];
@@ -28048,12 +28048,12 @@ function Ml(t, e, n, s, r, i) {
     const B = u > 0 ? u - s : 0, V = d > 0 ? d - s : 0, L = (B + V) / 2, O = L !== 0 ? p * L / (L + s) : p;
     h = (p - O) / 2;
   }
-  const g = Math.max(1e-3, p * d - n / Ye) / d, A = (p - g) / 2, b = l + A + h, v = r - A - h, { outerStart: w, outerEnd: x, innerStart: S, innerEnd: q } = XB(e, f, d, v - b), C = d - w, E = d - x, T = b + w / C, k = v - x / E, R = f + S, D = f + q, N = b + S / R, F = v - q / D;
+  const g = Math.max(1e-3, p * d - n / Ye) / d, A = (p - g) / 2, b = l + A + h, v = r - A - h, { outerStart: w, outerEnd: x, innerStart: S, innerEnd: q } = XB(e, f, d, v - b), C = d - w, E = d - x, T = b + w / C, R = v - x / E, k = f + S, D = f + q, N = b + S / k, F = v - q / D;
   if (t.beginPath(), i) {
-    const B = (T + k) / 2;
-    if (t.arc(o, a, d, T, B), t.arc(o, a, d, B, k), x > 0) {
-      const U = Rr(E, k, o, a);
-      t.arc(U.x, U.y, x, k, v + it);
+    const B = (T + R) / 2;
+    if (t.arc(o, a, d, T, B), t.arc(o, a, d, B, R), x > 0) {
+      const U = Rr(E, R, o, a);
+      t.arc(U.x, U.y, x, R, v + it);
     }
     const V = Rr(D, v, o, a);
     if (t.lineTo(V.x, V.y), q > 0) {
@@ -28062,7 +28062,7 @@ function Ml(t, e, n, s, r, i) {
     }
     const L = (v - q / f + (b + S / f)) / 2;
     if (t.arc(o, a, f, v - q / f, L, !0), t.arc(o, a, f, L, b + S / f, !0), S > 0) {
-      const U = Rr(R, N, o, a);
+      const U = Rr(k, N, o, a);
       t.arc(U.x, U.y, S, N + Math.PI, b - it);
     }
     const O = Rr(C, b, o, a);
@@ -28074,7 +28074,7 @@ function Ml(t, e, n, s, r, i) {
     t.moveTo(o, a);
     const B = Math.cos(T) * d + o, V = Math.sin(T) * d + a;
     t.lineTo(B, V);
-    const L = Math.cos(k) * d + o, O = Math.sin(k) * d + a;
+    const L = Math.cos(R) * d + o, O = Math.sin(R) * d + a;
     t.lineTo(L, O);
   }
   t.closePath();
@@ -29188,22 +29188,22 @@ class eA extends as {
       r.save();
       const T = ae(E.lineWidth, 1);
       if (r.fillStyle = ae(E.fillStyle, a), r.lineCap = ae(E.lineCap, "butt"), r.lineDashOffset = ae(E.lineDashOffset, 0), r.lineJoin = ae(E.lineJoin, "miter"), r.lineWidth = T, r.strokeStyle = ae(E.strokeStyle, a), r.setLineDash(ae(E.lineDash, [])), o.usePointStyle) {
-        const k = {
+        const R = {
           radius: g * Math.SQRT2 / 2,
           pointStyle: E.pointStyle,
           rotation: E.rotation,
           borderWidth: T
-        }, R = l.xPlus(q, p / 2), D = C + f;
-        Wx(r, k, R, D, o.pointStyleWidth && p);
+        }, k = l.xPlus(q, p / 2), D = C + f;
+        Wx(r, R, k, D, o.pointStyleWidth && p);
       } else {
-        const k = C + Math.max((d - g) / 2, 0), R = l.leftForLtr(q, p), D = sr(E.borderRadius);
+        const R = C + Math.max((d - g) / 2, 0), k = l.leftForLtr(q, p), D = sr(E.borderRadius);
         r.beginPath(), Object.values(D).some((N) => N !== 0) ? To(r, {
-          x: R,
-          y: k,
+          x: k,
+          y: R,
           w: p,
           h: g,
           radius: D
-        }) : r.rect(R, k, p, g), r.fill(), T !== 0 && r.stroke();
+        }) : r.rect(k, R, p, g), r.fill(), T !== 0 && r.stroke();
       }
       r.restore();
     }, v = function(q, C, E) {
@@ -29224,12 +29224,12 @@ class eA extends as {
     const S = A + u;
     this.legendItems.forEach((q, C) => {
       r.strokeStyle = q.fontColor, r.fillStyle = q.fontColor;
-      const E = r.measureText(q.text).width, T = l.textAlign(q.textAlign || (q.textAlign = o.textAlign)), k = p + f + E;
-      let R = h.x, D = h.y;
-      l.setWidth(this.width), w ? C > 0 && R + k + u > this.right && (D = h.y += S, h.line++, R = h.x = qt(i, this.left + u, this.right - s[h.line])) : C > 0 && D + S > this.bottom && (R = h.x = R + n[h.line].width + u, h.line++, D = h.y = qt(i, this.top + x + u, this.bottom - n[h.line].height));
-      const N = l.x(R);
-      if (b(N, D, q), R = uN(T, R + p + f, w ? R + k : this.right, e.rtl), v(l.x(R), D, q), w)
-        h.x += k + u;
+      const E = r.measureText(q.text).width, T = l.textAlign(q.textAlign || (q.textAlign = o.textAlign)), R = p + f + E;
+      let k = h.x, D = h.y;
+      l.setWidth(this.width), w ? C > 0 && k + R + u > this.right && (D = h.y += S, h.line++, k = h.x = qt(i, this.left + u, this.right - s[h.line])) : C > 0 && D + S > this.bottom && (k = h.x = k + n[h.line].width + u, h.line++, D = h.y = qt(i, this.top + x + u, this.bottom - n[h.line].height));
+      const N = l.x(k);
+      if (b(N, D, q), k = uN(T, k + p + f, w ? k + R : this.right, e.rtl), v(l.x(k), D, q), w)
+        h.x += R + u;
       else if (typeof q.text != "string") {
         const F = c.lineHeight;
         h.y += ww(q, F) + u;
@@ -30162,13 +30162,13 @@ function cI(t, e) {
       }
     ];
   T = Math.ceil(A / S) - Math.floor(g / S), T > p && (S = em(T * S / p / h) * h), xe(l) || (q = Math.pow(10, l), S = Math.ceil(S * q) / q), r === "ticks" ? (C = Math.floor(g / S) * S, E = Math.ceil(A / S) * S) : (C = g, E = A), b && v && i && sN((a - o) / i, S / 1e3) ? (T = Math.round(Math.min((a - o) / S, u)), S = (a - o) / T, C = o, E = a) : w ? (C = b ? o : C, E = v ? a : E, T = c - 1, S = (E - C) / T) : (T = (E - C) / S, Gi(T, Math.round(T), S / 1e3) ? T = Math.round(T) : T = Math.ceil(T));
-  const k = Math.max(tm(S), tm(C));
-  q = Math.pow(10, xe(l) ? k : l), C = Math.round(C * q) / q, E = Math.round(E * q) / q;
-  let R = 0;
+  const R = Math.max(tm(S), tm(C));
+  q = Math.pow(10, xe(l) ? R : l), C = Math.round(C * q) / q, E = Math.round(E * q) / q;
+  let k = 0;
   for (b && (f && C !== o ? (n.push({
     value: o
-  }), C < o && R++, Gi(Math.round((C + R * S) * q) / q, o, aA(o, x, t)) && R++) : C < o && R++); R < T; ++R) {
-    const D = Math.round((C + R * S) * q) / q;
+  }), C < o && k++, Gi(Math.round((C + k * S) * q) / q, o, aA(o, x, t)) && k++) : C < o && k++); k < T; ++k) {
+    const D = Math.round((C + k * S) * q) / q;
     if (v && D > a)
       break;
     n.push({
@@ -31383,11 +31383,11 @@ const DI = () => {
     finishAutoPlay: C,
     isSoundMuted: E,
     selectedFiatCurrency: T,
-    setFiatConversionRates: k,
-    fiatConversionRates: R,
+    setFiatConversionRates: R,
+    fiatConversionRates: k,
     setShowFiat: D,
     showFiat: N
-  } = ct(), { setResult: F, setMultiplier: B, setTotalProfit: V, resetGame: L } = DA(), { updateProfitData: O } = Yo(), [U, H] = tt(!1), _ = (Z) => ts.reverseConvertCurrency(Number(Z), T.code, h.currencyCode, R);
+  } = ct(), { setResult: F, setMultiplier: B, setTotalProfit: V, resetGame: L } = DA(), { updateProfitData: O } = Yo(), [U, H] = tt(!1), _ = (Z) => ts.reverseConvertCurrency(Number(Z), T.code, h.currencyCode, k);
   Oe(() => {
     E || nv(), v(n), (async () => {
       if (r)
@@ -31402,9 +31402,9 @@ const DI = () => {
         ge.cryptoPrices && Object.entries(ge.cryptoPrices).forEach(([se, ut]) => {
           Z[`${ge.code}_${se}`] = ut.rate, de === ut.currencyDefinition.code && g(ut.currencyDefinition);
         });
-      }), k(Z), D(s.showFiat);
+      }), R(Z), D(s.showFiat);
     }
-  }, [k, g]);
+  }, [R, g]);
   const ve = async () => {
     if (r)
       try {
@@ -31452,7 +31452,7 @@ const DI = () => {
           }
         }, de = await ll(r, "cointoss", Z);
         F(de.custom.face), B(de.multiplier ?? 0), V(de.winAmount), b(de.balance), f(!1);
-        const ge = ts.convertCurrency(de.winAmount, h.currencyCode, T.code, R);
+        const ge = ts.convertCurrency(de.winAmount, h.currencyCode, T.code, k);
         T.code && T.fractionalDigits && console.error(ts.format(Du(ge), T.code, T.fractionalDigits)), O(de.winAmount, de.win), Wt(de.win ? "win" : "lose");
       } catch (Z) {
         console.error("Error placing bet:", Z), Z instanceof Error && console.error("Error message:", Z.message);
@@ -31741,21 +31741,21 @@ function FI({
   }, [a, l, d]), Oe(() => (document.addEventListener("mouseup", C), () => {
     document.removeEventListener("mouseup", C);
   }), []);
-  const E = (T, k) => {
-    const R = u === "auto" && a.includes(T), D = {
-      backgroundImage: k === "hidden" && h !== "betplay-alt" ? `url(${w(h)})` : "none",
+  const E = (T, R) => {
+    const k = u === "auto" && a.includes(T), D = {
+      backgroundImage: R === "hidden" && h !== "betplay-alt" ? `url(${w(h)})` : "none",
       backgroundSize: "cover",
       transition: "all 0.3s ease",
-      borderWidth: R ? "3px" : h === "betplay-alt" ? "0px" : "2px",
+      borderWidth: k ? "3px" : h === "betplay-alt" ? "0px" : "2px",
       borderStyle: "solid",
-      borderColor: R ? "#9932CC" : h === "betplay-alt" ? "" : h === "betpanda" ? "rgba(31, 232, 138, 0.7)" : "rgba(220, 1, 108, 0.7)"
+      borderColor: k ? "#9932CC" : h === "betplay-alt" ? "" : h === "betpanda" ? "rgba(31, 232, 138, 0.7)" : "rgba(220, 1, 108, 0.7)"
     };
-    return k === "diamond" ? {
+    return R === "diamond" ? {
       ...D,
       borderColor: "#1fe88a",
       backgroundColor: "#1fe88a"
       // Green for gems
-    } : k === "mine" ? {
+    } : R === "mine" ? {
       ...D,
       borderColor: "rgb(248, 113, 113)",
       backgroundColor: "rgb(248, 113, 113)"
@@ -31763,29 +31763,29 @@ function FI({
     } : D;
   };
   return /* @__PURE__ */ m.jsxs("div", { className: "grid grid-cols-5 gap-2 h-full w-full", children: [
-    n.map((T, k) => /* @__PURE__ */ m.jsxs(
+    n.map((T, R) => /* @__PURE__ */ m.jsxs(
       Ir.div,
       {
         initial: { rotateY: 0 },
         animate: { rotateY: T !== "hidden" ? 180 : 0 },
         transition: { duration: 0.3 },
         className: `w-full h-full aspect-square rounded-sm flex items-center justify-center will-change-auto
-          ${s && !i.includes(k) ? "opacity-20" : ""}
-          ${c.includes(k) ? "animate-custom-pulse" : ""}
+          ${s && !i.includes(R) ? "opacity-20" : ""}
+          ${c.includes(R) ? "animate-custom-pulse" : ""}
         `,
         children: [
           /* @__PURE__ */ m.jsxs(
             xt,
             {
-              onMouseDown: () => S(k),
-              onMouseEnter: () => q(k),
-              style: E(k, T),
+              onMouseDown: () => S(R),
+              onMouseEnter: () => q(R),
+              style: E(R, T),
               className: `w-full h-full disabled:opacity-100 text-4xl rounded-sm p-3 select-none 
               ${T === "diamond" ? "bg-green-500 border-opacity-0" : T === "mine" ? "bg-red-400 text-white border-opacity-0" : "bg-secondary cursor-pointer border-secondary"}
             `,
               disabled: p || u === "manual" && (!f || T !== "hidden"),
               children: [
-                c.includes(k) && h === "betplay-alt" && /* @__PURE__ */ m.jsx("div", { className: "absolute inset-0 flex items-center justify-center", children: /* @__PURE__ */ m.jsx("div", { className: "w-9 h-9 border-4 border-border border-t-brand rounded-full animate-spin" }) }),
+                c.includes(R) && h === "betplay-alt" && /* @__PURE__ */ m.jsx("div", { className: "absolute inset-0 flex items-center justify-center", children: /* @__PURE__ */ m.jsx("div", { className: "w-9 h-9 border-4 border-border border-t-brand rounded-full animate-spin" }) }),
                 (T !== "hidden" || s) && /* @__PURE__ */ m.jsx(
                   "img",
                   {
@@ -31799,7 +31799,7 @@ function FI({
               ]
             }
           ),
-          /* @__PURE__ */ m.jsx(Mu, { children: T === "diamond" && parseInt(A) === k && f && u === "manual" && /* @__PURE__ */ m.jsx(
+          /* @__PURE__ */ m.jsx(Mu, { children: T === "diamond" && parseInt(A) === R && f && u === "manual" && /* @__PURE__ */ m.jsx(
             Ir.div,
             {
               initial: { opacity: 0, scale: 0.8 },
@@ -31823,7 +31823,7 @@ function FI({
           ) })
         ]
       },
-      `${k}-${h}`
+      `${R}-${h}`
     )),
     /* @__PURE__ */ m.jsx(Mu, { children: u === "auto" && a.length === 0 && /* @__PURE__ */ m.jsxs(
       Ir.div,
@@ -31936,24 +31936,24 @@ var kw = ["PageUp", "PageDown"], Mw = ["ArrowUp", "ArrowDown", "ArrowLeft", "Arr
     } = t, A = y.useRef(/* @__PURE__ */ new Set()), b = y.useRef(0), w = o === "horizontal" ? YI : KI, [x = [], S] = fi({
       prop: u,
       defaultProp: c,
-      onChange: (R) => {
+      onChange: (k) => {
         var N;
-        (N = [...A.current][b.current]) == null || N.focus(), d(R);
+        (N = [...A.current][b.current]) == null || N.focus(), d(k);
       }
     }), q = y.useRef(x);
-    function C(R) {
-      const D = JI(x, R);
-      k(R, D);
+    function C(k) {
+      const D = JI(x, k);
+      R(k, D);
     }
-    function E(R) {
-      k(R, b.current);
+    function E(k) {
+      R(k, b.current);
     }
     function T() {
-      const R = q.current[b.current];
-      x[b.current] !== R && f(x);
+      const k = q.current[b.current];
+      x[b.current] !== k && f(x);
     }
-    function k(R, D, { commit: N } = { commit: !1 }) {
-      const F = n5(i), B = s5(Math.round((R - s) / i) * i + s, F), V = qf(B, [s, r]);
+    function R(k, D, { commit: N } = { commit: !1 }) {
+      const F = n5(i), B = s5(Math.round((k - s) / i) * i + s, F), V = qf(B, [s, r]);
       S((L = []) => {
         const O = ZI(L, V, D);
         if (t5(O, l * i)) {
@@ -31993,12 +31993,12 @@ var kw = ["PageUp", "PageDown"], Mw = ["ArrowUp", "ArrowDown", "ArrowLeft", "Arr
             onSlideStart: a ? void 0 : C,
             onSlideMove: a ? void 0 : E,
             onSlideEnd: a ? void 0 : T,
-            onHomeKeyDown: () => !a && k(s, 0, { commit: !0 }),
-            onEndKeyDown: () => !a && k(r, x.length - 1, { commit: !0 }),
-            onStepKeyDown: ({ event: R, direction: D }) => {
+            onHomeKeyDown: () => !a && R(s, 0, { commit: !0 }),
+            onEndKeyDown: () => !a && R(r, x.length - 1, { commit: !0 }),
+            onStepKeyDown: ({ event: k, direction: D }) => {
               if (!a) {
-                const B = kw.includes(R.key) || R.shiftKey && Mw.includes(R.key) ? 10 : 1, V = b.current, L = x[V], O = i * B * D;
-                k(L + O, V, { commit: !0 });
+                const B = kw.includes(k.key) || k.shiftKey && Mw.includes(k.key) ? 10 : 1, V = b.current, L = x[V], O = i * B * D;
+                R(L + O, V, { commit: !0 });
               }
             }
           }
@@ -32353,8 +32353,8 @@ const a5 = ({
     numberOfBets: C,
     onWinMode: E,
     onLossMode: T,
-    onWinValue: k,
-    onLossValue: R,
+    onWinValue: R,
+    onLossValue: k,
     minesCount: D,
     errors: N,
     validateSettings: F
@@ -32547,7 +32547,7 @@ const a5 = ({
                           wt,
                           {
                             type: "number",
-                            value: k,
+                            value: R,
                             onChange: (se) => _(
                               "onWinValue",
                               parseFloat(se.target.value)
@@ -32605,7 +32605,7 @@ const a5 = ({
                           wt,
                           {
                             type: "number",
-                            value: R,
+                            value: k,
                             onChange: (se) => _(
                               "onLossValue",
                               parseFloat(se.target.value)
@@ -32699,8 +32699,8 @@ const a5 = ({
     setIsFinishingBet: C,
     finishAutoPlay: E,
     isSoundMuted: T,
-    selectedFiatCurrency: k,
-    setFiatConversionRates: R,
+    selectedFiatCurrency: R,
+    setFiatConversionRates: k,
     fiatConversionRates: D,
     setShowFiat: N,
     showFiat: F,
@@ -32723,7 +32723,7 @@ const a5 = ({
     removeFetchingCell: ge,
     fetchingCells: se,
     totalProfit: ut
-  } = Do(), { updateProfitData: X } = Yo(), [Ie, ot] = tt(!1), { addToast: Je } = nf(), Kt = (G) => ts.reverseConvertCurrency(Number(G), k.code, p.currencyCode, D);
+  } = Do(), { updateProfitData: X } = Yo(), [Ie, ot] = tt(!1), { addToast: Je } = nf(), Kt = (G) => ts.reverseConvertCurrency(Number(G), R.code, p.currencyCode, D);
   Oe(() => {
     T || nv(), w(n), (async () => {
       if (r)
@@ -32738,9 +32738,9 @@ const a5 = ({
         fe.cryptoPrices && Object.entries(fe.cryptoPrices).forEach(([Lt, nt]) => {
           G[`${fe.code}_${Lt}`] = nt.rate, ee === nt.currencyDefinition.code && B(nt.currencyDefinition);
         });
-      }), R(G), N(s.showFiat);
+      }), k(G), N(s.showFiat);
     }
-  }, [R, B]);
+  }, [k, B]);
   const Ft = async () => {
     if (r)
       try {
@@ -32789,7 +32789,7 @@ const a5 = ({
       h(!0), we();
       try {
         const G = {
-          amount: p.crypto && k && F ? Kt(a).toFixed(p.fractionalDigits).toString() : a.toString(),
+          amount: p.crypto && R && F ? Kt(a).toFixed(p.fractionalDigits).toString() : a.toString(),
           currency: p.currencyCode,
           custom: {
             mines: l
@@ -32867,7 +32867,7 @@ const a5 = ({
         const on = $i.getState().betAmount;
         console.log("Current bet amount:", on);
         const vi = {
-          amount: p.crypto && k && F ? Kt(on).toFixed(p.fractionalDigits).toString() : on.toString(),
+          amount: p.crypto && R && F ? Kt(on).toFixed(p.fractionalDigits).toString() : on.toString(),
           currency: p.currencyCode,
           custom: {
             mines: l,
