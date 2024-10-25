@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T07:47:14.817Z */
+/* Built at: 2024-10-25T07:56:25.983Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -15545,8 +15545,10 @@ function dy({
     fiatConversionRates: l,
     showFiat: c
   } = Le(), u = rt(null), d = Oe((k) => {
-    const M = o.crypto && a && c ? a : o;
-    return k.toFixed(M.fractionalDigits);
+    if (k) {
+      const M = o.crypto && a && c ? a : o;
+      return k.toFixed(M.fractionalDigits);
+    }
   }, [o, a, c]), f = Oe((k) => Qn.convertCurrency(
     k,
     o.currencyCode,
