@@ -1,0 +1,33 @@
+{
+  "blink": {
+    "common":{
+     "manual":"Manual",
+      "auto":"Auto",
+      "numberOfBets":"Number of Bets",
+      "onWin":"On Win",
+      "reset":"Reset",
+      "betOn":"Bet on",
+      "result":"Result",
+      "increaseBy":"Increase by",
+      "stopOnWin":"Stop On Win",
+      "stopOnLoss":"Stop On Loss",
+      "betAmount":"Bet Amount",
+      "betType":"Bet Type",
+      "betResult":"Bet Result",
+      "totalWinnings":"Total Winnings",
+      "bet": "Place Bet",
+      "autoPlay":"Auto Bet",
+      "startAutoBet":"Start Autobet",
+      "stopAutoBet":"Stop autobet",
+      "placeBet":"Place Bet"
+    },
+    "cointoss": {
+      "heads":"Heads",
+      "tails":"Tails",
+      "edge":"Edge",
+      "flipping":"Flipping..."
+
+    }
+    
+  }
+}
