@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T08:03:42.124Z */
+/* Built at: 2024-10-25T08:16:29.430Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -16486,7 +16486,10 @@ const Zo = {
   validateSettings: () => {
     const { betRanges: n, selectedCurrency: s, balance: r, selectedFiatCurrency: i, fiatConversionRates: o, showFiat: a } = Le.getState();
     uo.getState();
-    const l = e(), c = (g) => Qn.convertCurrency(Number(g), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), p = he.object({
+    const l = e(), c = (g) => Qn.convertCurrency(Number(g), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol;
+    let h;
+    r ? h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits) : h = 0;
+    const p = he.object({
       mode: he.enum(["manual", "auto"]),
       betAmount: he.union([
         // Allow any representation of zero (0, 0.00, etc) but not negative
