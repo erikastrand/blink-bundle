@@ -1,9 +1,9 @@
-/* Built at: 2024-10-25T08:16:29.430Z */
+/* Built at: 2024-10-25T08:24:01.189Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
 import * as v from "react";
-import V, { createContext as Ms, useState as et, useCallback as Oe, useEffect as Ce, useContext as dt, useId as Ad, Component as Gw, useLayoutEffect as bd, useRef as rt, useInsertionEffect as xA, useMemo as ms, forwardRef as Gr, Fragment as wA, createElement as Cn, Children as Zw, isValidElement as Xw } from "react";
+import V, { createContext as Ms, useState as et, useCallback as Oe, useEffect as qe, useContext as dt, useId as Ad, Component as Gw, useLayoutEffect as bd, useRef as rt, useInsertionEffect as xA, useMemo as ms, forwardRef as Gr, Fragment as wA, createElement as Cn, Children as Zw, isValidElement as Xw } from "react";
 import * as yd from "react-dom";
 import SA from "react-dom";
 var CA = { exports: {} }, Sa = {};
@@ -34,8 +34,8 @@ var CA = { exports: {} }, Sa = {};
   }
   function w(E, B, H) {
     {
-      var ne = b.ReactDebugCurrentFrame, Se = ne.getStackAddendum();
-      Se !== "" && (B += "%s", H = H.concat([Se]));
+      var ne = b.ReactDebugCurrentFrame, Ce = ne.getStackAddendum();
+      Ce !== "" && (B += "%s", H = H.concat([Ce]));
       var De = H.map(function(fe) {
         return String(fe);
       });
@@ -55,8 +55,8 @@ var CA = { exports: {} }, Sa = {};
     var ne = E.displayName;
     if (ne)
       return ne;
-    var Se = B.displayName || B.name || "";
-    return Se !== "" ? H + "(" + Se + ")" : H;
+    var Ce = B.displayName || B.name || "";
+    return Ce !== "" ? H + "(" + Ce + ")" : H;
   }
   function P(E) {
     return E.displayName || "Context";
@@ -96,7 +96,7 @@ var CA = { exports: {} }, Sa = {};
           var ne = E.displayName || null;
           return ne !== null ? ne : O(E.type) || "Memo";
         case f: {
-          var Se = E, De = Se._payload, fe = Se._init;
+          var Ce = E, De = Ce._payload, fe = Ce._init;
           try {
             return O(fe(De));
           } catch {
@@ -174,8 +174,8 @@ var CA = { exports: {} }, Sa = {};
       if (pt === void 0)
         try {
           throw Error();
-        } catch (Se) {
-          var ne = Se.stack.trim().match(/\n( *(at )?)/);
+        } catch (Ce) {
+          var ne = Ce.stack.trim().match(/\n( *(at )?)/);
           pt = ne && ne[1] || "";
         }
       return `
@@ -197,7 +197,7 @@ var CA = { exports: {} }, Sa = {};
     }
     var ne;
     kt = !0;
-    var Se = Error.prepareStackTrace;
+    var Ce = Error.prepareStackTrace;
     Error.prepareStackTrace = void 0;
     var De;
     De = Ve.current, Ve.current = null, Me();
@@ -253,7 +253,7 @@ var CA = { exports: {} }, Sa = {};
           }
       }
     } finally {
-      kt = !1, Ve.current = De, Pe(), Error.prepareStackTrace = Se;
+      kt = !1, Ve.current = De, Pe(), Error.prepareStackTrace = Ce;
     }
     var gr = E ? E.displayName || E.name : "", Ns = gr ? tt(gr) : "";
     return typeof E == "function" && Ye.set(E, Ns), Ns;
@@ -285,9 +285,9 @@ var CA = { exports: {} }, Sa = {};
         case d:
           return Ft(E.type, B, H);
         case f: {
-          var ne = E, Se = ne._payload, De = ne._init;
+          var ne = E, Ce = ne._payload, De = ne._init;
           try {
-            return Ft(De(Se), B, H);
+            return Ft(De(Ce), B, H);
           } catch {
           }
         }
@@ -302,7 +302,7 @@ var CA = { exports: {} }, Sa = {};
     } else
       ns.setExtraStackFrame(null);
   }
-  function qe(E, B, H, ne, Se) {
+  function Se(E, B, H, ne, Ce) {
     {
       var De = Function.call.bind(_t);
       for (var fe in E)
@@ -317,7 +317,7 @@ var CA = { exports: {} }, Sa = {};
           } catch (Xe) {
             ue = Xe;
           }
-          ue && !(ue instanceof Error) && (Q(Se), y("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", ne || "React class", H, fe, typeof ue), Q(null)), ue instanceof Error && !(ue.message in ts) && (ts[ue.message] = !0, Q(Se), y("Failed %s type: %s", H, ue.message), Q(null));
+          ue && !(ue instanceof Error) && (Q(Ce), y("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", ne || "React class", H, fe, typeof ue), Q(null)), ue instanceof Error && !(ue.message in ts) && (ts[ue.message] = !0, Q(Ce), y("Failed %s type: %s", H, ue.message), Q(null));
         }
     }
   }
@@ -396,7 +396,7 @@ var CA = { exports: {} }, Sa = {};
       });
     }
   }
-  var gc = function(E, B, H, ne, Se, De, fe) {
+  var gc = function(E, B, H, ne, Ce, De, fe) {
     var ue = {
       // This tag allows us to uniquely identify this as a React Element
       $$typeof: e,
@@ -422,13 +422,13 @@ var CA = { exports: {} }, Sa = {};
       configurable: !1,
       enumerable: !1,
       writable: !1,
-      value: Se
+      value: Ce
     }), Object.freeze && (Object.freeze(ue.props), Object.freeze(ue)), ue;
   };
-  function ee(E, B, H, ne, Se) {
+  function ee(E, B, H, ne, Ce) {
     {
       var De, fe = {}, ue = null, Mt = null;
-      H !== void 0 && (Vo(H), ue = "" + H), dc(B) && (Vo(B.key), ue = "" + B.key), Wo(B) && (Mt = B.ref, fc(B, Se));
+      H !== void 0 && (Vo(H), ue = "" + H), dc(B) && (Vo(B.key), ue = "" + B.key), Wo(B) && (Mt = B.ref, fc(B, Ce));
       for (De in B)
         _t.call(B, De) && !uc.hasOwnProperty(De) && (fe[De] = B[De]);
       if (E && E.defaultProps) {
@@ -440,7 +440,7 @@ var CA = { exports: {} }, Sa = {};
         var st = typeof E == "function" ? E.displayName || E.name || "Unknown" : E;
         ue && hc(fe, st), Mt && pc(fe, st);
       }
-      return gc(E, ue, Mt, Se, ne, hn.current, fe);
+      return gc(E, ue, Mt, Ce, ne, hn.current, fe);
     }
   }
   var me = b.ReactCurrentOwner, ke = b.ReactDebugCurrentFrame;
@@ -509,9 +509,9 @@ Check the top-level render call using <` + H + ">.");
       else if (yt(E))
         E._store && (E._store.validated = !0);
       else if (E) {
-        var Se = A(E);
-        if (typeof Se == "function" && Se !== E.entries)
-          for (var De = Se.call(E), fe; !(fe = De.next()).done; )
+        var Ce = A(E);
+        if (typeof Ce == "function" && Ce !== E.entries)
+          for (var De = Ce.call(E), fe; !(fe = De.next()).done; )
             yt(fe.value) && nn(fe.value, B);
       }
     }
@@ -532,11 +532,11 @@ Check the top-level render call using <` + H + ">.");
         return;
       if (H) {
         var ne = O(B);
-        qe(H, E.props, "prop", ne, E);
+        Se(H, E.props, "prop", ne, E);
       } else if (B.PropTypes !== void 0 && !Ae) {
         Ae = !0;
-        var Se = O(B);
-        y("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", Se || "Unknown");
+        var Ce = O(B);
+        y("Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?", Ce || "Unknown");
       }
       typeof B.getDefaultProps == "function" && !B.getDefaultProps.isReactClassApproved && y("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
     }
@@ -554,7 +554,7 @@ Check the top-level render call using <` + H + ">.");
     }
   }
   var hh = {};
-  function ph(E, B, H, ne, Se, De) {
+  function ph(E, B, H, ne, Ce, De) {
     {
       var fe = k(E);
       if (!fe) {
@@ -565,7 +565,7 @@ Check the top-level render call using <` + H + ">.");
         var Xe;
         E === null ? Xe = "null" : We(E) ? Xe = "array" : E !== void 0 && E.$$typeof === e ? (Xe = "<" + (O(E.type) || "Unknown") + " />", ue = " Did you accidentally export a JSX literal instead of a component?") : Xe = typeof E, y("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", Xe, ue);
       }
-      var st = ee(E, B, H, Se, De);
+      var st = ee(E, B, H, Ce, De);
       if (st == null)
         return st;
       if (fe) {
@@ -739,7 +739,7 @@ const m1 = ({ children: t }) => {
   }, []), o = Oe(async () => {
     await g1(), n(null);
   }, []);
-  return Ce(() => {
+  return qe(() => {
     (async () => {
       const l = await h1();
       if (l)
@@ -2459,7 +2459,7 @@ const Mh = (t) => {
 })), eS = { BASE_URL: "/", DEV: !1, IS_WEB_COMPONENT: !0, MODE: "web-component-prod", PROD: !0, SSR: !1, VITE_DEV_API_BASE_URL: "http://localhost:3000", VITE_DEV_BASE_URL: "/", VITE_PROD_API_BASE_URL: "https://eu.blink.run", VITE_PROD_BASE_URL: "/games/blink-games/", VITE_STAGING_API_BASE_URL: "http://localhost:8080", VITE_STAGING_BASE_URL: "/games/blink-games/", VITE_WC_API_BASE_URL: "https://eu.blink.run", VITE_WC_BASE_URL: "/", VITE_WC_BUILD_TYPE: "web-component", VITE_WC_PROD_API_BASE_URL: "https://eu.blink.run", VITE_WC_PROD_BASE_URL: "/", VITE_WC_PROD_BUILD_TYPE: "web-component" };
 function Xr() {
   const [t, e] = et(!1);
-  return Ce(() => {
+  return qe(() => {
     function n() {
       e(window.innerWidth < 1024);
     }
@@ -9149,7 +9149,7 @@ function KE() {
   if (t === null)
     return [!0, null];
   const { isPresent: e, onExitComplete: n, register: s } = t, r = Ad();
-  Ce(() => s(r), []);
+  qe(() => s(r), []);
   const i = Oe(() => n && n(r), [r, n]);
   return !e && n ? [!1, i] : [!0];
 }
@@ -10225,7 +10225,7 @@ const UR = {
   transformPagePoint: (t) => t,
   isStatic: !1,
   reducedMotion: "never"
-}), Fl = Ms({}), Gd = typeof window < "u", Cb = Gd ? bd : Ce, qb = Ms({ strict: !1 });
+}), Fl = Ms({}), Gd = typeof window < "u", Cb = Gd ? bd : qe, qb = Ms({ strict: !1 });
 let rg = !1;
 function zR(t, e, n, s, r) {
   var i;
@@ -10245,7 +10245,7 @@ function zR(t, e, n, s, r) {
   const h = n[G0], p = rt(!!h && !window.MotionHandoffIsComplete && ((i = window.MotionHasOptimisedAnimation) === null || i === void 0 ? void 0 : i.call(window, h)));
   return Cb(() => {
     d && (d.updateFeatures(), Yd.render(d.render), p.current && d.animationState && d.animationState.animateChanges());
-  }), Ce(() => {
+  }), qe(() => {
     d && (!p.current && d.animationState && d.animationState.animateChanges(), p.current = !1, rg || (rg = !0, queueMicrotask(HR)));
   }), d;
 }
@@ -11523,7 +11523,7 @@ const sl = new $k(), eT = ({
   ), r = Oe((i) => {
     n((o) => o.filter((a) => a.id !== i));
   }, []);
-  return Ce(() => {
+  return qe(() => {
     const i = (o) => {
       s(o);
     };
@@ -11536,7 +11536,7 @@ const sl = new $k(), eT = ({
   ] }) });
 }, tT = ({ toasts: t }) => /* @__PURE__ */ m.jsx("div", { className: "absolute top-4 left-4 z-50 flex flex-col space-y-2", children: /* @__PURE__ */ m.jsx(Gi, { children: t.map((e) => /* @__PURE__ */ m.jsx(nT, { toast: e }, e.id)) }) }), nT = ({ toast: t }) => {
   const { removeToast: e } = Mo(), [n, s] = et(100), [r, i] = et(!1), o = rt(null), a = rt(Date.now()), l = rt(t.duration);
-  Ce(() => {
+  qe(() => {
     if (!t.duration) return;
     const f = () => {
       if (!r && t.duration) {
@@ -15561,9 +15561,9 @@ function dy({
     const k = Math.max(t);
     return d(k);
   }), [A, b] = et(!1);
-  Ce(() => {
+  qe(() => {
     g(d(t));
-  }, [t]), Ce(() => {
+  }, [t]), qe(() => {
     if (!n && u.current) {
       u.current.focus();
       const k = Number(i.minBet), M = o.crypto && a && c ? f(k) : k;
@@ -16058,7 +16058,7 @@ const UM = () => {
   className: l
 }) => {
   const [c, u] = et(null), d = rt(null);
-  return Ce(() => {
+  return qe(() => {
     const f = () => {
       const { x: h, y: p, angle: g } = UM(), A = {
         id: Date.now(),
@@ -16075,7 +16075,7 @@ const UM = () => {
     };
     return f(), () => {
     };
-  }, [t, e, n, s]), Ce(() => {
+  }, [t, e, n, s]), qe(() => {
     const h = requestAnimationFrame(() => {
       c && u((p) => {
         if (!p) return null;
@@ -16151,7 +16151,7 @@ const UM = () => {
       r
     ]
   );
-  return Ce(() => {
+  return qe(() => {
     const u = () => {
       if (l.current) {
         const f = l.current;
@@ -16172,7 +16172,7 @@ const UM = () => {
     s,
     r,
     c
-  ]), Ce(() => {
+  ]), qe(() => {
     const u = l.current;
     if (!u) return;
     const d = u.getContext("2d");
@@ -16303,7 +16303,7 @@ const HM = ({ theme: t }) => {
     selectedFiatCurrency: f,
     showFiat: h
   } = Le(), { setResult: p, setMultiplier: g, setTotalProfit: A, resetGame: b } = DA(), { updateProfitData: y } = Oo(), w = (T) => Qn.reverseConvertCurrency(Number(T), f.code, c.currencyCode, fiatConversionRates);
-  Ce(() => {
+  qe(() => {
     d || ey();
   }, [d]);
   const x = Oe(async () => {
@@ -16555,9 +16555,9 @@ function XM({
   }, R = () => {
     w(!1);
   };
-  Ce(() => {
+  qe(() => {
     a.length === 0 && l(0), l(sS(d, a.length));
-  }, [a, l, d]), Ce(() => (document.addEventListener("mouseup", R), () => {
+  }, [a, l, d]), qe(() => (document.addEventListener("mouseup", R), () => {
     document.removeEventListener("mouseup", R);
   }), []);
   const T = (k, M) => {
@@ -17403,7 +17403,7 @@ const kP = ({
   } = fo(), { addToast: L } = Mo(), I = (ce) => s.crypto && d && f ? ce.toFixed(d.fractionalDigits) : ce.toFixed(s.fractionalDigits), [F, N] = et(
     I(x)
   ), [W, Y] = et(null);
-  Ce(() => {
+  qe(() => {
     if (x > Number(u.minBet))
       N(I(x));
     else if (u.minBet) {
@@ -17805,7 +17805,7 @@ const kP = ({
     removeFetchingCell: Ie,
     fetchingCells: Me
   } = uo(), { updateProfitData: Pe } = Oo(), { addToast: Ve } = Mo(), pt = (Q) => Qn.reverseConvertCurrency(Number(Q), S.code, p.currencyCode, C);
-  Ce(() => {
+  qe(() => {
     w || ey(), I(), (async () => {
       if (t)
         await tt();
@@ -17815,10 +17815,10 @@ const kP = ({
   }, [x, t]);
   const tt = async () => {
     if (t && (console.log("checkForActiveRound"), x.isRoundActive)) {
-      const { id: Q, wager: qe, betData: Ze, gameData: We } = x;
+      const { id: Q, wager: Se, betData: Ze, gameData: We } = x;
       T(Number(Q)), h(!0), M(We.multiplier), c({
         minesCount: Number(Ze.mines),
-        betAmount: qe
+        betAmount: Se
       }), P(We.selected), We.selected.forEach((Pn) => {
         k(Pn, "diamond");
       });
@@ -17833,12 +17833,12 @@ const kP = ({
           custom: {
             mines: a
           }
-        }, qe = await sf(
+        }, Se = await sf(
           t,
           "mines",
           Q
         );
-        T(qe.roundId), A(qe.balance), h(qe.active);
+        T(Se.roundId), Se.balance && A(Se.balance), h(Se.active);
       } catch (Q) {
         Ve({
           variant: "error",
@@ -17861,9 +17861,9 @@ const kP = ({
     Ve
   ]), Ye = Oe(
     (Q) => {
-      A(Q.balance);
-      const qe = X.map((Ze, We) => Q.custom.mines.includes(We) ? "mine" : "diamond");
-      Y(qe), P(Q.custom.selected), Q.win ? (Wt("win"), Pe(Q.winAmount ?? 0, !0), M(Q.multiplier ?? 0)) : (Wt("bomb"), Pe(Q.winAmount ?? 0, !1)), L(Q.winAmount ?? 0);
+      Q.balance && A(Q.balance);
+      const Se = X.map((Ze, We) => Q.custom.mines.includes(We) ? "mine" : "diamond");
+      Y(Se), P(Q.custom.selected), Q.win ? (Wt("win"), Pe(Q.winAmount ?? 0, !0), M(Q.multiplier ?? 0)) : (Wt("bomb"), Pe(Q.winAmount ?? 0, !1)), L(Q.winAmount ?? 0);
     },
     [
       A,
@@ -17898,13 +17898,13 @@ const kP = ({
     nt,
     kt
   ]), Zt = Oe(
-    (Q, qe) => {
+    (Q, Se) => {
       if (P(Q.custom.selected), M(Q.multiplier), Q.custom.selected.forEach((Ze) => {
         k(
           Ze,
           Q.custom.mines.includes(Ze) ? "mine" : "diamond"
         );
-      }), Q.active && !qe) {
+      }), Q.active && !Se) {
         const We = 1 + Q.custom.selected.length / 100;
         Wt("diamond", { pitch: We });
       } else {
@@ -17932,7 +17932,7 @@ const kP = ({
       return;
     }
     try {
-      const qe = {
+      const Se = {
         gameRoundId: j.toString(),
         custom: { selected: Q }
       };
@@ -17940,11 +17940,11 @@ const kP = ({
       const Ze = await uT(
         t,
         "mines",
-        qe
+        Se
       );
       Q.forEach((We) => Ie(We)), Zt(Ze, !1), Ze.active || (L(Ze.winAmount), h(!1), Wt(Ze.win ? "win" : "bomb"));
-    } catch (qe) {
-      Q.forEach((Ze) => Ie(Ze)), qe instanceof Error ? qe.message === "Game has ended" && (L(0), h(!1)) : console.error("Unexpected error:", qe);
+    } catch (Se) {
+      Q.forEach((Ze) => Ie(Ze)), Se instanceof Error ? Se.message === "Game has ended" && (L(0), h(!1)) : console.error("Unexpected error:", Se);
     } finally {
       i.current = !1, s.current.length > 0 && Ft();
     }
@@ -17988,16 +17988,16 @@ const kP = ({
         return;
       }
       try {
-        const qe = await fT(
+        const Se = await fT(
           t,
           "mines",
           j.toString()
         );
-        M(qe.multiplier), L(qe.winAmount);
-        const Ze = X.map((We, Pn) => qe.custom.mines.includes(Pn) ? "mine" : "diamond");
-        Y(Ze), A(b + qe.winAmount), Pe(qe.winAmount - o, qe.win), h(!1), Wt("win");
-      } catch (qe) {
-        console.error("Error cashing out:", qe);
+        M(Se.multiplier), L(Se.winAmount);
+        const Ze = X.map((We, Pn) => Se.custom.mines.includes(Pn) ? "mine" : "diamond");
+        Y(Ze), b && A(b + Se.winAmount), Pe(Se.winAmount - o, Se.win), h(!1), Wt("win");
+      } catch (Se) {
+        console.error("Error cashing out:", Se);
       }
     }
   }, [
@@ -18017,11 +18017,11 @@ const kP = ({
     Ve,
     O.length
   ]);
-  Ce(() => () => {
+  qe(() => () => {
     r.current && clearTimeout(r.current);
-  }, []), Ce(() => {
+  }, []), qe(() => {
     f || (s.current = [], r.current && clearTimeout(r.current));
-  }, [f]), Ce(() => {
+  }, [f]), qe(() => {
     I(), l === "manual" && N();
   }, [l, N, I]);
   const ns = d === "neobet" && !e ? {
@@ -19297,7 +19297,7 @@ const wD = eD, SD = tD, CD = XP, qD = sD, ED = JP, Pg = ZP, RD = nD, kD = (t, e,
     platform: i
   });
 };
-var Ta = typeof document < "u" ? bd : Ce;
+var Ta = typeof document < "u" ? bd : qe;
 function gl(t, e) {
   if (t === e)
     return !0;
@@ -29188,7 +29188,7 @@ function Rj() {
 }
 function kj() {
   const t = rt(null), e = rt(null), [n, s] = et(null), { profit: r } = Oo(), i = zl();
-  return Ce(() => {
+  return qe(() => {
     if (t.current) {
       const o = t.current.getContext("2d");
       o && (e.current && e.current.destroy(), e.current = new _n(o, {
@@ -30577,7 +30577,7 @@ const Kx = V.createContext({
 QF(`[data-vaul-drawer]{touch-action:none;will-change:transform;transition:transform .5s cubic-bezier(.32, .72, 0, 1);animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=open]{animation-name:slideFromBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=closed]{animation-name:slideToBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=open]{animation-name:slideFromTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=closed]{animation-name:slideToTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=open]{animation-name:slideFromLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=closed]{animation-name:slideToLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=open]{animation-name:slideFromRight}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=closed]{animation-name:slideToRight}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,100%,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,-100%,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(-100%,0,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(100%,0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-overlay][data-vaul-snap-points=false]{animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-overlay][data-vaul-snap-points=false][data-state=open]{animation-name:fadeIn}[data-vaul-overlay][data-state=closed]{animation-name:fadeOut}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:0;transition:opacity .5s cubic-bezier(.32, .72, 0, 1)}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:1}[data-vaul-drawer]:not([data-vaul-custom-container=true])::after{content:'';position:absolute;background:inherit;background-color:inherit}[data-vaul-drawer][data-vaul-drawer-direction=top]::after{top:initial;bottom:100%;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=bottom]::after{top:100%;bottom:initial;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=left]::after{left:initial;right:100%;top:0;bottom:0;width:200%}[data-vaul-drawer][data-vaul-drawer-direction=right]::after{left:100%;right:initial;top:0;bottom:0;width:200%}[data-vaul-overlay][data-vaul-snap-points=true]:not([data-vaul-snap-points-overlay=true]):not(
 [data-state=closed]
 ){opacity:0}[data-vaul-overlay][data-vaul-snap-points-overlay=true]{opacity:1}[data-vaul-handle]{display:block;position:relative;opacity:.7;background:#e2e2e4;margin-left:auto;margin-right:auto;height:5px;width:32px;border-radius:1rem;touch-action:pan-y}[data-vaul-handle]:active,[data-vaul-handle]:hover{opacity:1}[data-vaul-handle-hitarea]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100%,2.75rem);height:max(100%,2.75rem);touch-action:inherit}@media (hover:hover) and (pointer:fine){[data-vaul-drawer]{user-select:none}}@media (pointer:fine){[data-vaul-handle-hitarea]:{width:100%;height:100%}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{to{opacity:0}}@keyframes slideFromBottom{from{transform:translate3d(0,100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToBottom{to{transform:translate3d(0,100%,0)}}@keyframes slideFromTop{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToTop{to{transform:translate3d(0,-100%,0)}}@keyframes slideFromLeft{from{transform:translate3d(-100%,0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToLeft{to{transform:translate3d(-100%,0,0)}}@keyframes slideFromRight{from{transform:translate3d(100%,0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToRight{to{transform:translate3d(100%,0,0)}}`);
-const GF = 24, ZF = typeof window < "u" ? bd : Ce;
+const GF = 24, ZF = typeof window < "u" ? bd : qe;
 function mA(...t) {
   return (...e) => {
     for (let n of t)
@@ -31074,7 +31074,7 @@ function tw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
     }
   }), [F, N] = V.useState(!1), [W, Y] = V.useState(!1), [X, oe] = V.useState(!1), Ie = V.useRef(null), Me = V.useRef(null), Pe = V.useRef(null), Ve = V.useRef(null), pt = V.useRef(null), tt = V.useRef(!1), kt = V.useRef(null), Ye = V.useRef(0), nt = V.useRef(!1), ce = V.useRef(0), Z = V.useRef(null), Zt = V.useRef(((O = Z.current) == null ? void 0 : O.getBoundingClientRect().height) || 0), Ft = V.useRef(((j = Z.current) == null ? void 0 : j.getBoundingClientRect().width) || 0), _t = V.useRef(0), ts = V.useCallback((ee) => {
     i && ee === We.length - 1 && (Me.current = /* @__PURE__ */ new Date());
-  }, []), { activeSnapPoint: ns, activeSnapPointIndex: Q, setActiveSnapPoint: qe, onRelease: Ze, snapPointsOffset: We, onDrag: Pn, shouldFade: Fo, getPercentageDragged: _o } = f_({
+  }, []), { activeSnapPoint: ns, activeSnapPointIndex: Q, setActiveSnapPoint: Se, onRelease: Ze, snapPointsOffset: We, onDrag: Pn, shouldFade: Fo, getPercentageDragged: _o } = f_({
     snapPoints: i,
     activeSnapPointProp: h,
     setActiveSnapPointProp: p,
@@ -31210,7 +31210,7 @@ function tw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
   ]);
   function Dn(ee) {
     dc(), b == null || b(), ee || I(!1), setTimeout(() => {
-      i && qe(i[0]);
+      i && Se(i[0]);
     }, ze.DURATION * 1e3);
   }
   function Wo() {
@@ -31320,7 +31320,7 @@ function tw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
     value: {
       activeSnapPoint: ns,
       snapPoints: i,
-      setActiveSnapPoint: qe,
+      setActiveSnapPoint: Se,
       drawerRef: Z,
       overlayRef: Ie,
       onOpenChange: e,
@@ -32318,7 +32318,7 @@ function __() {
     isLoadingCurrentSeed: c,
     fetchCurrentSeed: u
   } = Le(), { authToken: d } = So(), f = Xr();
-  Ce(() => {
+  qe(() => {
     a && d && u(d);
   }, [a, d, u]);
   const h = Oe(() => {
@@ -33194,7 +33194,7 @@ const g3 = ({
     },
     [p, g, b, A]
   );
-  if (Ce(() => {
+  if (qe(() => {
     if (i) {
       const P = {}, O = i.preferredExchangeCurrency;
       i.currencyDefinitions.forEach((j) => {
@@ -33203,9 +33203,9 @@ const g3 = ({
         });
       }), x(P), S(i.showFiat);
     }
-  }, [x, q]), Ce(() => {
+  }, [x, q]), qe(() => {
     C && h.currencyCode !== n && k(n);
-  }, [n]), Ce(() => {
+  }, [n]), qe(() => {
     (async () => {
       if (!e || !t) {
         d("Invalid parameters"), c(!1);
@@ -33242,7 +33242,7 @@ const g3 = ({
     selectedCurrency: n,
     balance: s
   } = Le();
-  return Ce(() => {
+  return qe(() => {
     if (e.current && s !== 0) {
       const i = new CustomEvent("balanceUpdate", {
         bubbles: !0,
@@ -33255,7 +33255,7 @@ const g3 = ({
       });
       e.current.dispatchEvent(i), console.log("Pushing event balanceUpdate. New balance: " + s);
     }
-  }, [s, n.currencyCode]), Ce(() => {
+  }, [s, n.currencyCode]), qe(() => {
     if (e.current) {
       const i = e.current.getRootNode();
       if (i instanceof ShadowRoot) {
