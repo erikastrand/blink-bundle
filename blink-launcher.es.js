@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T01:41:15.967Z */
+/* Built at: 2024-10-25T02:18:43.749Z */
 var Yw = Object.defineProperty;
 var Kw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Kw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -16466,7 +16466,7 @@ function _k({
     selectedCells: a,
     setPreselectMultiplier: l,
     fetchingCells: c
-  } = co(), { mode: u, minesCount: d } = uo(), { isGameActive: f, theme: h, isAutoPlaying: p, isFetching: g } = Oe(), A = _r(), b = i.slice(-1).join(), [v, w] = $e(!1), x = (T) => T === "betpanda" ? Xk : Gk, S = (T) => {
+  } = co(), { mode: u, minesCount: d } = uo(), { isGameActive: f, theme: h, isAutoPlaying: p, isFetching: g } = Oe(), A = _r(), b = i.slice(-1).join(), [v, w] = $e(!1), x = (T) => T === "betpanda" ? Xk : T === "betpanda" ? Gk : null, S = (T) => {
     if (u === "auto" && !f && !p) {
       if (!a.includes(T) && d + a.length >= 25)
         return;
