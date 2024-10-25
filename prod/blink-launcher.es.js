@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T07:34:51.977Z */
+/* Built at: 2024-10-25T07:44:35.160Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -15655,21 +15655,21 @@ const zl = () => {
   const { selectedCurrency: t, selectedFiatCurrency: e, showFiat: n } = Le();
   return Oe((r, i = !1) => {
     let o;
-    if (i) {
-      if (!t) return;
-      o = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: t.currencyCode,
-        minimumFractionDigits: t.fractionalDigits,
-        maximumFractionDigits: t.fractionalDigits
-      }).format(r);
-    } else {
+    if (!i && n) {
       if (!e) return;
       o = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: e.code,
         minimumFractionDigits: e.fractionalDigits,
         maximumFractionDigits: e.fractionalDigits
+      }).format(r);
+    } else {
+      if (!t) return;
+      o = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: t.currencyCode,
+        minimumFractionDigits: t.fractionalDigits,
+        maximumFractionDigits: t.fractionalDigits
       }).format(r);
     }
     return t.currencyCode === "BTC" ? o.replace(/BTC/, "₿") : o;
