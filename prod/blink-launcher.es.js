@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T08:24:01.189Z */
+/* Built at: 2024-10-25T08:33:48.984Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -16321,7 +16321,7 @@ const HM = ({ theme: t }) => {
           "cointoss",
           T
         );
-        p(k.custom.face), g(k.multiplier ?? 0), A(k.winAmount), u(k.balance), l(!1);
+        p(k.custom.face), g(k.multiplier ?? 0), A(k.winAmount), k.balance && u(k.balance), l(!1);
         const M = Qn.convertCurrency(k.winAmount, c.currencyCode, f.code, fiatConversionRates);
         f.code && f.fractionalDigits && console.error(Qn.format(Big(M), f.code, f.fractionalDigits)), y(k.winAmount, k.win), Wt(k.win ? "win" : "lose");
       } catch (T) {
@@ -16343,7 +16343,7 @@ const HM = ({ theme: t }) => {
     b
   ]), S = Oe(
     (T) => {
-      p(T.custom.face), u(T.balance), l(!1), g(T.multiplier ?? 0), A(T.winAmount), y(
+      p(T.custom.face), T.balance && u(T.balance), l(!1), g(T.multiplier ?? 0), A(T.winAmount), y(
         T.win ? T.winAmount - s : T.winAmount,
         T.win
       ), Wt(T.win ? "win" : "lose");
@@ -16486,10 +16486,7 @@ const Zo = {
   validateSettings: () => {
     const { betRanges: n, selectedCurrency: s, balance: r, selectedFiatCurrency: i, fiatConversionRates: o, showFiat: a } = Le.getState();
     uo.getState();
-    const l = e(), c = (g) => Qn.convertCurrency(Number(g), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol;
-    let h;
-    r ? h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits) : h = 0;
-    const p = he.object({
+    const l = e(), c = (g) => Qn.convertCurrency(Number(g), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), p = he.object({
       mode: he.enum(["manual", "auto"]),
       betAmount: he.union([
         // Allow any representation of zero (0, 0.00, etc) but not negative
@@ -33098,10 +33095,7 @@ function p3() {
     setIsSoundMuted: r,
     setLiveStatsOpen: i,
     isLiveStatsOpen: o
-  } = Le();
-  let a;
-  t && (a = t.toFixed(e.fractionalDigits));
-  const l = () => {
+  } = Le(), a = t.toFixed(e.fractionalDigits), l = () => {
     r(!s);
   };
   return /* @__PURE__ */ m.jsxs("div", { className: "h-[55px] bg-[#152538] border-t border-gray-700 flex items-center justify-between px-4", children: [
