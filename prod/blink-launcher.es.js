@@ -1,4 +1,4 @@
-/* Built at: 2024-10-25T07:44:35.160Z */
+/* Built at: 2024-10-25T07:46:28.727Z */
 var Yw = Object.defineProperty;
 var Qw = (t, e, n) => e in t ? Yw(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => Qw(t, typeof e != "symbol" ? e + "" : e, n);
@@ -15655,7 +15655,7 @@ const zl = () => {
   const { selectedCurrency: t, selectedFiatCurrency: e, showFiat: n } = Le();
   return Oe((r, i = !1) => {
     let o;
-    if (!i && n) {
+    if (!i && t.crypto && e && n) {
       if (!e) return;
       o = new Intl.NumberFormat("en-US", {
         style: "currency",
