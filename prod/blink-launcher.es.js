@@ -1,4 +1,4 @@
-/* Built at: 2024-10-29T08:52:45.741Z */
+/* Built at: 2024-10-29T09:04:50.917Z */
 var g1 = Object.defineProperty;
 var m1 = (t, e, n) => e in t ? g1(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var W = (t, e, n) => m1(t, typeof e != "symbol" ? e + "" : e, n);
@@ -36,8 +36,8 @@ var NA = { exports: {} }, Ea = {};
     {
       var se = b.ReactDebugCurrentFrame, qe = se.getStackAddendum();
       qe !== "" && (I += "%s", K = K.concat([qe]));
-      var Oe = K.map(function(fe) {
-        return String(fe);
+      var Oe = K.map(function(he) {
+        return String(he);
       });
       Oe.unshift("Warning: " + I), Function.prototype.apply.call(console[E], console, Oe);
     }
@@ -96,9 +96,9 @@ var NA = { exports: {} }, Ea = {};
           var se = E.displayName || null;
           return se !== null ? se : B(E.type) || "Memo";
         case f: {
-          var qe = E, Oe = qe._payload, fe = qe._init;
+          var qe = E, Oe = qe._payload, he = qe._init;
           try {
-            return B(fe(Oe));
+            return B(he(Oe));
           } catch {
             return null;
           }
@@ -203,27 +203,27 @@ var NA = { exports: {} }, Ea = {};
     Oe = Te.current, Te.current = null, Ue();
     try {
       if (I) {
-        var fe = function() {
+        var he = function() {
           throw Error();
         };
-        if (Object.defineProperty(fe.prototype, "props", {
+        if (Object.defineProperty(he.prototype, "props", {
           set: function() {
             throw Error();
           }
         }), typeof Reflect == "object" && Reflect.construct) {
           try {
-            Reflect.construct(fe, []);
+            Reflect.construct(he, []);
           } catch (jt) {
             se = jt;
           }
-          Reflect.construct(E, [], fe);
+          Reflect.construct(E, [], he);
         } else {
           try {
-            fe.call();
+            he.call();
           } catch (jt) {
             se = jt;
           }
-          E.call(fe.prototype);
+          E.call(he.prototype);
         }
       } else {
         try {
@@ -305,19 +305,19 @@ var NA = { exports: {} }, Ea = {};
   function J(E, I, K, se, qe) {
     {
       var Oe = Function.call.bind(Pt);
-      for (var fe in E)
-        if (Oe(E, fe)) {
+      for (var he in E)
+        if (Oe(E, he)) {
           var ue = void 0;
           try {
-            if (typeof E[fe] != "function") {
-              var Dt = Error((se || "React class") + ": " + K + " type `" + fe + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof E[fe] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+            if (typeof E[he] != "function") {
+              var Dt = Error((se || "React class") + ": " + K + " type `" + he + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof E[he] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
               throw Dt.name = "Invariant Violation", Dt;
             }
-            ue = E[fe](I, fe, se, K, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
+            ue = E[he](I, he, se, K, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
           } catch (Ze) {
             ue = Ze;
           }
-          ue && !(ue instanceof Error) && (gt(qe), y("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", se || "React class", K, fe, typeof ue), gt(null)), ue instanceof Error && !(ue.message in ts) && (ts[ue.message] = !0, gt(qe), y("Failed %s type: %s", K, ue.message), gt(null));
+          ue && !(ue instanceof Error) && (gt(qe), y("%s: type specification of %s `%s` is invalid; the type checker function must return `null` or an `Error` but returned a %s. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).", se || "React class", K, he, typeof ue), gt(null)), ue instanceof Error && !(ue.message in ts) && (ts[ue.message] = !0, gt(qe), y("Failed %s type: %s", K, ue.message), gt(null));
         }
     }
   }
@@ -396,7 +396,7 @@ var NA = { exports: {} }, Ea = {};
       });
     }
   }
-  var Ec = function(E, I, K, se, qe, Oe, fe) {
+  var Ec = function(E, I, K, se, qe, Oe, he) {
     var ue = {
       // This tag allows us to uniquely identify this as a React Element
       $$typeof: e,
@@ -404,7 +404,7 @@ var NA = { exports: {} }, Ea = {};
       type: E,
       key: I,
       ref: K,
-      props: fe,
+      props: he,
       // Record the component responsible for creating this element.
       _owner: Oe
     };
@@ -427,20 +427,20 @@ var NA = { exports: {} }, Ea = {};
   };
   function ee(E, I, K, se, qe) {
     {
-      var Oe, fe = {}, ue = null, Dt = null;
+      var Oe, he = {}, ue = null, Dt = null;
       K !== void 0 && (zo(K), ue = "" + K), wc(I) && (zo(I.key), ue = "" + I.key), Ko(I) && (Dt = I.ref, Sc(I, qe));
       for (Oe in I)
-        Pt.call(I, Oe) && !xc.hasOwnProperty(Oe) && (fe[Oe] = I[Oe]);
+        Pt.call(I, Oe) && !xc.hasOwnProperty(Oe) && (he[Oe] = I[Oe]);
       if (E && E.defaultProps) {
         var Ze = E.defaultProps;
         for (Oe in Ze)
-          fe[Oe] === void 0 && (fe[Oe] = Ze[Oe]);
+          he[Oe] === void 0 && (he[Oe] = Ze[Oe]);
       }
       if (ue || Dt) {
         var $e = typeof E == "function" ? E.displayName || E.name || "Unknown" : E;
-        ue && Cc(fe, $e), Dt && qc(fe, $e);
+        ue && Cc(he, $e), Dt && qc(he, $e);
       }
-      return Ec(E, ue, Dt, qe, se, gn.current, fe);
+      return Ec(E, ue, Dt, qe, se, gn.current, he);
     }
   }
   var me = b.ReactCurrentOwner, Pe = b.ReactDebugCurrentFrame;
@@ -511,8 +511,8 @@ Check the top-level render call using <` + K + ">.");
       else if (E) {
         var qe = A(E);
         if (typeof qe == "function" && qe !== E.entries)
-          for (var Oe = qe.call(E), fe; !(fe = Oe.next()).done; )
-            wt(fe.value) && rn(fe.value, I);
+          for (var Oe = qe.call(E), he; !(he = Oe.next()).done; )
+            wt(he.value) && rn(he.value, I);
       }
     }
   }
@@ -556,8 +556,8 @@ Check the top-level render call using <` + K + ">.");
   var wh = {};
   function Sh(E, I, K, se, qe, Oe) {
     {
-      var fe = k(E);
-      if (!fe) {
+      var he = k(E);
+      if (!he) {
         var ue = "";
         (E === void 0 || typeof E == "object" && E !== null && Object.keys(E).length === 0) && (ue += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
         var Dt = Mt();
@@ -568,7 +568,7 @@ Check the top-level render call using <` + K + ">.");
       var $e = ee(E, I, K, qe, Oe);
       if ($e == null)
         return $e;
-      if (fe) {
+      if (he) {
         var Jt = I.children;
         if (Jt !== void 0)
           if (se)
@@ -15116,7 +15116,7 @@ const yP = (t, e = {
   bigint: (t) => ws.create({ ...t, coerce: !0 }),
   date: (t) => ir.create({ ...t, coerce: !0 })
 }, eM = te;
-var he = /* @__PURE__ */ Object.freeze({
+var fe = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   defaultErrorMap: zr,
   setErrorMap: eP,
@@ -15568,36 +15568,36 @@ const Tg = {
   }),
   resetSettings: () => t(Tg),
   validateSettings: () => {
-    const { betRanges: n, selectedCurrency: s, balance: r, selectedFiatCurrency: i, fiatConversionRates: o, showFiat: a } = Be.getState(), l = e(), c = (m) => gs.convertCurrency(Number(m), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), g = he.object({
-      mode: he.enum(["manual", "auto"]),
-      betAmount: he.union([
+    const { betRanges: n, selectedCurrency: s, balance: r, selectedFiatCurrency: i, fiatConversionRates: o, showFiat: a } = Be.getState(), l = e(), c = (m) => gs.convertCurrency(Number(m), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), g = fe.object({
+      mode: fe.enum(["manual", "auto"]),
+      betAmount: fe.union([
         // Allow any representation of zero (0, 0.00, etc) but not negative
-        he.number().min(0).max(0, `Your bet must be at least ${f} ${u}`),
+        fe.number().min(0).max(0, `Your bet must be at least ${f} ${u}`),
         // Handle all other positive values with the original constraints
-        he.number().min(Number(u), `Your bet must be at least ${f} ${u}`).max(Number(d), `Your bet can max be ${f} ${d}`).max(Number(h), "You don't have enough balance.")
+        fe.number().min(Number(u), `Your bet must be at least ${f} ${u}`).max(Number(d), `Your bet can max be ${f} ${d}`).max(Number(h), "You don't have enough balance.")
       ]),
-      coinSide: he.enum(["HEADS", "TAILS", "EDGE"]),
-      stopOnWin: he.number().nonnegative("Stop on win must be non-negative").max(Number(h), "You don't have enough balance."),
-      stopOnLoss: he.number().nonnegative("Stop on loss must be non-negative"),
-      numberOfBets: he.union([
-        he.literal("∞"),
-        he.string().refine(
+      coinSide: fe.enum(["HEADS", "TAILS", "EDGE"]),
+      stopOnWin: fe.number().nonnegative("Stop on win must be non-negative").max(Number(h), "You don't have enough balance."),
+      stopOnLoss: fe.number().nonnegative("Stop on loss must be non-negative"),
+      numberOfBets: fe.union([
+        fe.literal("∞"),
+        fe.string().refine(
           (m) => !isNaN(Number(m)) && Number(m) > 0 && Number(m) <= 1e3,
           {
             message: "Number of bets must be a positive number up to 1000 or '∞'"
           }
         ),
-        he.number().int().positive().max(1e3, "Maximum 1000")
+        fe.number().int().positive().max(1e3, "Maximum 1000")
       ]).transform((m) => m === "∞" ? m : Number(m)),
-      onWinMode: he.enum(["reset", "increase"]),
-      onLossMode: he.enum(["reset", "increase"]),
-      onWinValue: he.number().nonnegative("Cannot be less than 0"),
-      onLossValue: he.number().nonnegative("Cannot be less than 0")
+      onWinMode: fe.enum(["reset", "increase"]),
+      onLossMode: fe.enum(["reset", "increase"]),
+      onWinValue: fe.number().nonnegative("Cannot be less than 0"),
+      onLossValue: fe.number().nonnegative("Cannot be less than 0")
     });
     try {
       return g.parse(l), t({ errors: {} }), !0;
     } catch (m) {
-      if (m instanceof he.ZodError) {
+      if (m instanceof fe.ZodError) {
         const A = {};
         m.issues.forEach((b) => {
           b.path[0] && (A[b.path[0]] = b.message, console.log("newErrors", b.message));
@@ -16511,7 +16511,7 @@ const $o = {
   preSelectMultiplier: 0,
   revealedCells: [],
   selectedCells: [],
-  totalProfit: 0,
+  totalProfit: "",
   fetchingCells: []
   // Initialize fetchingCells
 }, Yr = ti((t) => ({
@@ -16575,36 +16575,37 @@ const $o = {
   validateSettings: () => {
     const { betRanges: n, selectedCurrency: s, balance: r, selectedFiatCurrency: i, fiatConversionRates: o, showFiat: a } = Be.getState();
     Yr.getState();
-    const l = e(), c = (m) => gs.convertCurrency(Number(m), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), g = he.object({
-      mode: he.enum(["manual", "auto"]),
-      betAmount: he.union([
+    const l = e(), c = (m) => gs.convertCurrency(Number(m), s.currencyCode, i.code, o), u = s.crypto && i && a ? c(Number(n.minBet)).toFixed(i.fractionalDigits) : parseFloat(n.minBet).toFixed(s.fractionalDigits), d = s.crypto && i && a ? c(Number(n.maxBet)).toFixed(i.fractionalDigits) : parseFloat(n.maxBet).toFixed(s.fractionalDigits), f = s.crypto && i && a ? i.prefixSymbol : s.prefixSymbol, h = s.crypto && i && a ? c(Number(r)).toFixed(i.fractionalDigits) : r.toFixed(s.fractionalDigits), g = fe.object({
+      mode: fe.enum(["manual", "auto"]),
+      betAmount: fe.union([
+        fe.number().max(Number(h), "You don't have enough balance."),
         // Allow any representation of zero (0, 0.00, etc) but not negative
-        he.number().min(0).max(0, `Your bet must be at least ${f} ${u}`),
+        fe.number().min(0).max(0, `Your bet must be at least ${f} ${u}`),
         // Handle all other positive values with the original constraints
-        he.number().min(Number(u), `Your bet must be at least ${f} ${u}`).max(Number(d), `Your bet can max be ${f} ${d}`).max(Number(h), "You don't have enough balance.")
+        fe.number().min(Number(u), `Your bet must be at least ${f} ${u}`).max(Number(d), `Your bet can max be ${f} ${d}`)
       ]),
-      minesCount: he.number().int().min(1).max(24, "Mines count must be between 1 and 24"),
-      stopOnWin: he.number().nonnegative("Stop on win must be non-negative").max(Number(h), "You don't have enough balance."),
-      stopOnLoss: he.number().nonnegative("Stop on loss must be non-negative"),
-      numberOfBets: he.union([
-        he.literal("∞"),
-        he.string().refine(
+      minesCount: fe.number().int().min(1).max(24, "Mines count must be between 1 and 24"),
+      stopOnWin: fe.number().nonnegative("Stop on win must be non-negative").max(Number(h), "You don't have enough balance."),
+      stopOnLoss: fe.number().nonnegative("Stop on loss must be non-negative"),
+      numberOfBets: fe.union([
+        fe.literal("∞"),
+        fe.string().refine(
           (m) => !isNaN(Number(m)) && Number(m) > 0 && Number(m) <= 1e3,
           {
             message: "Number of bets must be a positive number up to 1000 or '∞'"
           }
         ),
-        he.number().int().positive().max(1e3, "Maximum 1000")
+        fe.number().int().positive().max(1e3, "Maximum 1000")
       ]).transform((m) => m === "∞" ? m : Number(m)),
-      onWinMode: he.enum(["reset", "increase"]),
-      onLossMode: he.enum(["reset", "increase"]),
-      onWinValue: he.number().nonnegative("Cannot be less than 0"),
-      onLossValue: he.number().nonnegative("Cannot be less than 0")
+      onWinMode: fe.enum(["reset", "increase"]),
+      onLossMode: fe.enum(["reset", "increase"]),
+      onWinValue: fe.number().nonnegative("Cannot be less than 0"),
+      onLossValue: fe.number().nonnegative("Cannot be less than 0")
     });
     try {
       return g.parse(l), t({ errors: {} }), !0;
     } catch (m) {
-      if (m instanceof he.ZodError) {
+      if (m instanceof fe.ZodError) {
         const A = {};
         m.issues.forEach((b) => {
           b.path[0] && (A[b.path[0]] = b.message, console.log("newErrors", b.message));
@@ -33603,10 +33604,10 @@ const HF = ({
       N.activeRound ? (N.activeRound.currency !== n ? (b(N.activeRound.currencyDefinition), f(n)) : b(N.currencyDefinition), S({
         ...N.activeRound,
         isRoundActive: !0
-      }), k(!0), h({ betAmount: N.activeRound.wager })) : (b(N.currencyDefinition), h({ betAmount: Number(N.allowedBets[0]) })), w({
+      }), k(!0), h({ betAmount: N.activeRound.wager })) : (b(N.currencyDefinition), h({ betAmount: Number(N.allowedBets[0]) }), w({
         minBet: N.allowedBets[0],
         maxBet: N.allowedBets[1]
-      }), y(N.balance), l({ status: "ready" });
+      })), y(N.balance), l({ status: "ready" });
     } catch (N) {
       console.error("Launcher initialization failed:", N), l({
         status: "error",
