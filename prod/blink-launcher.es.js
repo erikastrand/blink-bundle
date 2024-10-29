@@ -1,4 +1,4 @@
-/* Built at: 2024-10-29T09:04:50.917Z */
+/* Built at: 2024-10-29T09:13:45.938Z */
 var g1 = Object.defineProperty;
 var m1 = (t, e, n) => e in t ? g1(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var W = (t, e, n) => m1(t, typeof e != "symbol" ? e + "" : e, n);
@@ -33604,7 +33604,10 @@ const HF = ({
       N.activeRound ? (N.activeRound.currency !== n ? (b(N.activeRound.currencyDefinition), f(n)) : b(N.currencyDefinition), S({
         ...N.activeRound,
         isRoundActive: !0
-      }), k(!0), h({ betAmount: N.activeRound.wager })) : (b(N.currencyDefinition), h({ betAmount: Number(N.allowedBets[0]) }), w({
+      }), k(!0), h({ betAmount: N.activeRound.wager }), w({
+        minBet: N.allowedBets[0],
+        maxBet: N.allowedBets[1]
+      })) : (b(N.currencyDefinition), h({ betAmount: Number(N.allowedBets[0]) }), w({
         minBet: N.allowedBets[0],
         maxBet: N.allowedBets[1]
       })), y(N.balance), l({ status: "ready" });
