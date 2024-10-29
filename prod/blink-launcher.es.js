@@ -1,9 +1,9 @@
-/* Built at: 2024-10-29T03:59:19.339Z */
+/* Built at: 2024-10-29T04:07:51.067Z */
 var h1 = Object.defineProperty;
 var p1 = (t, e, n) => e in t ? h1(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var U = (t, e, n) => p1(t, typeof e != "symbol" ? e + "" : e, n);
 import * as v from "react";
-import V, { createContext as Ms, useState as it, useCallback as ke, useEffect as ve, useContext as ft, useId as Td, Component as g1, useLayoutEffect as Md, useRef as rt, useInsertionEffect as TA, useMemo as ms, forwardRef as Ps, Fragment as MA, createElement as Ft, Children as m1, isValidElement as A1 } from "react";
+import V, { createContext as Ms, useState as it, useCallback as ke, useEffect as we, useContext as ft, useId as Td, Component as g1, useLayoutEffect as Md, useRef as rt, useInsertionEffect as TA, useMemo as ms, forwardRef as Ps, Fragment as MA, createElement as Ft, Children as m1, isValidElement as A1 } from "react";
 import * as Pd from "react-dom";
 import PA from "react-dom";
 var DA = { exports: {} }, qa = {};
@@ -444,7 +444,7 @@ var DA = { exports: {} }, qa = {};
     }
   }
   var Ae = b.ReactCurrentOwner, Me = b.ReactDebugCurrentFrame;
-  function we(E) {
+  function xe(E) {
     if (E) {
       var L = E._owner, H = _t(E.type, E._source, L ? L.type : null);
       Me.setExtraStackFrame(H);
@@ -494,7 +494,7 @@ Check the top-level render call using <` + H + ">.");
         return;
       Ot[H] = !0;
       var ne = "";
-      E && E._owner && E._owner !== Ae.current && (ne = " It was passed a child from " + O(E._owner.type) + "."), we(E), y('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', H, ne), we(null);
+      E && E._owner && E._owner !== Ae.current && (ne = " It was passed a child from " + O(E._owner.type) + "."), xe(E), y('Each child in a list should have a unique "key" prop.%s%s See https://reactjs.org/link/warning-keys for more information.', H, ne), xe(null);
     }
   }
   function Ut(E, L) {
@@ -546,11 +546,11 @@ Check the top-level render call using <` + H + ">.");
       for (var L = Object.keys(E.props), H = 0; H < L.length; H++) {
         var ne = L[H];
         if (ne !== "children" && ne !== "key") {
-          we(E), y("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", ne), we(null);
+          xe(E), y("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", ne), xe(null);
           break;
         }
       }
-      E.ref !== null && (we(E), y("Invalid attribute `ref` supplied to `React.Fragment`."), we(null));
+      E.ref !== null && (xe(E), y("Invalid attribute `ref` supplied to `React.Fragment`."), xe(null));
     }
   }
   var vh = {};
@@ -739,7 +739,7 @@ const B1 = ({ children: t }) => {
   }, []), o = ke(async () => {
     await L1(), n(null);
   }, []);
-  return ve(() => {
+  return we(() => {
     (async () => {
       const l = await O1();
       if (l)
@@ -2459,7 +2459,7 @@ const jh = (t) => {
 })), vS = { BASE_URL: "/", DEV: !1, IS_WEB_COMPONENT: !0, MODE: "web-component-prod", PROD: !0, SSR: !1, VITE_DEV_API_BASE_URL: "http://localhost:3000", VITE_DEV_BASE_URL: "/", VITE_PROD_API_BASE_URL: "https://eu.blink.run", VITE_PROD_BASE_URL: "/games/blink-games/", VITE_STAGING_API_BASE_URL: "http://localhost:8080", VITE_STAGING_BASE_URL: "/games/blink-games/", VITE_WC_API_BASE_URL: "http://localhost:8080", VITE_WC_BASE_URL: "/", VITE_WC_BUILD_TYPE: "web-component", VITE_WC_PROD_API_BASE_URL: "http://localhost:8080", VITE_WC_PROD_BASE_URL: "/", VITE_WC_PROD_BUILD_TYPE: "web-component" };
 function dr() {
   const [t, e] = it(!1);
-  return ve(() => {
+  return we(() => {
     function n() {
       e(window.innerWidth < 1024);
     }
@@ -6453,26 +6453,26 @@ function A0(t) {
     return A0(sr(t, r));
   }, n;
 }
-const xe = A0(Eo);
-xe.Axios = Xs;
-xe.CanceledError = ni;
-xe.CancelToken = jd;
-xe.isCancel = c0;
-xe.VERSION = m0;
-xe.toFormData = Ll;
-xe.AxiosError = re;
-xe.Cancel = xe.CanceledError;
-xe.all = function(e) {
+const ve = A0(Eo);
+ve.Axios = Xs;
+ve.CanceledError = ni;
+ve.CancelToken = jd;
+ve.isCancel = c0;
+ve.VERSION = m0;
+ve.toFormData = Ll;
+ve.AxiosError = re;
+ve.Cancel = ve.CanceledError;
+ve.all = function(e) {
   return Promise.all(e);
 };
-xe.spread = M2;
-xe.isAxiosError = P2;
-xe.mergeConfig = sr;
-xe.AxiosHeaders = It;
-xe.formToJSON = (t) => l0(D.isHTMLForm(t) ? new FormData(t) : t);
-xe.getAdapter = g0.getAdapter;
-xe.HttpStatusCode = Tu;
-xe.default = xe;
+ve.spread = M2;
+ve.isAxiosError = P2;
+ve.mergeConfig = sr;
+ve.AxiosHeaders = It;
+ve.formToJSON = (t) => l0(D.isHTMLForm(t) ? new FormData(t) : t);
+ve.getAdapter = g0.getAdapter;
+ve.HttpStatusCode = Tu;
+ve.default = ve;
 const tp = /* @__PURE__ */ new Set();
 function Id(t, e, n) {
   t || tp.has(e) || (console.warn(e), tp.add(e));
@@ -9149,7 +9149,7 @@ function fR() {
   if (t === null)
     return [!0, null];
   const { isPresent: e, onExitComplete: n, register: s } = t, r = Td();
-  ve(() => s(r), []);
+  we(() => s(r), []);
   const i = ke(() => n && n(r), [r, n]);
   return !e && n ? [!1, i] : [!0];
 }
@@ -10225,7 +10225,7 @@ const lk = {
   transformPagePoint: (t) => t,
   isStatic: !1,
   reducedMotion: "never"
-}), Ul = Ms({}), lf = typeof window < "u", Db = lf ? Md : ve, Ob = Ms({ strict: !1 });
+}), Ul = Ms({}), lf = typeof window < "u", Db = lf ? Md : we, Ob = Ms({ strict: !1 });
 let dg = !1;
 function uk(t, e, n, s, r) {
   var i;
@@ -10245,7 +10245,7 @@ function uk(t, e, n, s, r) {
   const h = n[sb], g = rt(!!h && !window.MotionHandoffIsComplete && ((i = window.MotionHasOptimisedAnimation) === null || i === void 0 ? void 0 : i.call(window, h)));
   return Db(() => {
     d && (d.updateFeatures(), of.render(d.render), g.current && d.animationState && d.animationState.animateChanges());
-  }), ve(() => {
+  }), we(() => {
     d && (!g.current && d.animationState && d.animationState.animateChanges(), g.current = !1, dg || (dg = !0, queueMicrotask(dk)));
   }), d;
 }
@@ -11534,7 +11534,7 @@ const ol = new bT(), yT = ({
   ), r = ke((i) => {
     n((o) => o.filter((a) => a.id !== i));
   }, []);
-  return ve(() => {
+  return we(() => {
     const i = (o) => {
       s(o);
     };
@@ -11547,7 +11547,7 @@ const ol = new bT(), yT = ({
   ] }) });
 }, vT = ({ toasts: t }) => /* @__PURE__ */ p.jsx("div", { className: "absolute top-4 left-4 z-50 flex flex-col space-y-2", children: /* @__PURE__ */ p.jsx(Ji, { children: t.map((e) => /* @__PURE__ */ p.jsx(xT, { toast: e }, e.id)) }) }), xT = ({ toast: t }) => {
   const { removeToast: e } = Po(), [n, s] = it(100), [r, i] = it(!1), o = rt(null), a = rt(Date.now()), l = rt(t.duration);
-  ve(() => {
+  we(() => {
     if (!t.duration) return;
     const f = () => {
       if (!r && t.duration) {
@@ -11658,7 +11658,7 @@ const ol = new bT(), yT = ({
   500: "An unexpected error occurred. Please try again later."
 }, ST = (t) => wT[t] || "An unknown error occurred. Please try again.", Ls = (t) => {
   var e;
-  if (xe.isAxiosError(t)) {
+  if (ve.isAxiosError(t)) {
     const n = (e = t.response) == null ? void 0 : e.status, s = n ? ST(n) : "An unexpected error occurred.";
     ol.addToast({
       variant: "error",
@@ -11677,7 +11677,7 @@ const ol = new bT(), yT = ({
 async function CT(t) {
   if (!t) throw new Error("No authentication token found");
   try {
-    return (await xe.get(
+    return (await ve.get(
       `${Ns}/api/fair/current`,
       {
         headers: {
@@ -11693,7 +11693,7 @@ async function CT(t) {
 async function qT(t, e) {
   if (!t) throw new Error("No authentication token found");
   try {
-    return (await xe.get(
+    return (await ve.get(
       `${Ns}/api/fair/rotate/${e}`,
       {
         headers: {
@@ -11709,7 +11709,7 @@ async function qT(t, e) {
 async function ET(t, e) {
   if (!t || !e) throw new Error("No token or currencyCode found");
   try {
-    return (await xe.post(
+    return (await ve.post(
       `${Ns}/api/player/currency-change`,
       { currency: e },
       {
@@ -11720,13 +11720,13 @@ async function ET(t, e) {
       }
     )).data;
   } catch (n) {
-    throw xe.isAxiosError(n) && (console.log(n.status), console.error(n.response), Ls(n)), new Error(`Failed to perform game action 'currency-change': ${n}`);
+    throw ve.isAxiosError(n) && (console.log(n.status), console.error(n.response), Ls(n)), new Error(`Failed to perform game action 'currency-change': ${n}`);
   }
 }
 async function RT(t, e) {
   if (!t) throw new Error("No authentication token found");
   try {
-    return (await xe.get(
+    return (await ve.get(
       `${Ns}/api/game/${e}/config`,
       {
         headers: {
@@ -11742,7 +11742,7 @@ async function RT(t, e) {
 async function mf(t, e, n) {
   if (!t) throw new Error("No authentication token found");
   try {
-    return (await xe.post(
+    return (await ve.post(
       `${Ns}/api/game/${e}/bet`,
       n,
       {
@@ -11753,7 +11753,7 @@ async function mf(t, e, n) {
       }
     )).data;
   } catch (s) {
-    throw xe.isAxiosError(s) && (console.log(s.status), console.error(s.response), Ls(s)), new Error(`Failed to perform game action 'bet': ${s}`);
+    throw ve.isAxiosError(s) && (console.log(s.status), console.error(s.response), Ls(s)), new Error(`Failed to perform game action 'bet': ${s}`);
   }
 }
 class kT {
@@ -11859,7 +11859,7 @@ async function TT(t, e, n) {
   const s = n.custom.selected;
   return $b.enqueue(async () => {
     try {
-      return (await xe.post(
+      return (await ve.post(
         `${Ns}/api/game/${e}/play`,
         n,
         {
@@ -11870,7 +11870,7 @@ async function TT(t, e, n) {
         }
       )).data;
     } catch (r) {
-      throw xe.isAxiosError(r) && (console.log(r.status), console.error(r.response), Ls(r)), new Error(`Failed to perform game action 'play': ${r}`);
+      throw ve.isAxiosError(r) && (console.log(r.status), console.error(r.response), Ls(r)), new Error(`Failed to perform game action 'play': ${r}`);
     }
   }, s);
 }
@@ -11880,7 +11880,7 @@ function MT() {
 async function PT(t, e, n) {
   if (!t) throw new Error("No authentication token found");
   try {
-    return (await xe.post(
+    return (await ve.post(
       `${Ns}/api/game/${e}/play`,
       {
         gameRoundId: n,
@@ -11894,13 +11894,13 @@ async function PT(t, e, n) {
       }
     )).data;
   } catch (s) {
-    throw xe.isAxiosError(s) && (console.log(s.status), console.error(s.response), Ls(s)), new Error(`Failed to perform game action 'cashout': ${s}`);
+    throw ve.isAxiosError(s) && (console.log(s.status), console.error(s.response), Ls(s)), new Error(`Failed to perform game action 'cashout': ${s}`);
   }
 }
 async function DT(t, e) {
   if (!t) throw new Error("No authentication token found");
   try {
-    const n = await xe.get(
+    const n = await ve.get(
       `${Ns}/api/player/myBets`,
       {
         headers: { "x-token": t }
@@ -15623,9 +15623,9 @@ function xy({
     const T = Math.max(t);
     return d(T);
   }), [A, b] = it(!1);
-  ve(() => {
+  we(() => {
     m(d(t));
-  }, [t]), ve(() => {
+  }, [t]), we(() => {
     if (!n && u.current) {
       u.current.focus();
       const T = Number(i.minBet), M = o.crypto && a && c ? f(T) : T;
@@ -16120,7 +16120,7 @@ const lP = () => {
   className: l
 }) => {
   const [c, u] = it(null), d = rt(null);
-  return ve(() => {
+  return we(() => {
     const f = () => {
       const { x: h, y: g, angle: m } = lP(), A = {
         id: Date.now(),
@@ -16137,7 +16137,7 @@ const lP = () => {
     };
     return f(), () => {
     };
-  }, [t, e, n, s]), ve(() => {
+  }, [t, e, n, s]), we(() => {
     const h = requestAnimationFrame(() => {
       c && u((g) => {
         if (!g) return null;
@@ -16213,7 +16213,7 @@ const lP = () => {
       r
     ]
   );
-  return ve(() => {
+  return we(() => {
     const u = () => {
       if (l.current) {
         const f = l.current;
@@ -16234,7 +16234,7 @@ const lP = () => {
     s,
     r,
     c
-  ]), ve(() => {
+  ]), we(() => {
     const u = l.current;
     if (!u) return;
     const d = u.getContext("2d");
@@ -16365,7 +16365,7 @@ const dP = ({ theme: t }) => {
     selectedFiatCurrency: f,
     showFiat: h
   } = Le(), { setResult: g, setMultiplier: m, setTotalProfit: A, resetGame: b } = _A(), { updateProfitData: y } = No(), x = (k) => Qn.reverseConvertCurrency(Number(k), f.code, c.currencyCode, fiatConversionRates);
-  ve(() => {
+  we(() => {
     d || uy();
   }, [d]);
   const w = ke(async () => {
@@ -16541,8 +16541,8 @@ const Jo = {
   ...Mg,
   errors: {},
   updateSettings: (n) => t((s) => {
-    const r = { ...s, ...n }, { clearSelectedCells: i } = Hr.getState();
-    return n.minesCount && i(), n.onWinMode === "reset" && s.onWinMode !== "reset" && (r.onWinValue = 0), n.onLossMode === "reset" && s.onLossMode !== "reset" && (r.onLossValue = 0), r;
+    const r = { ...s, ...n }, { clearSelectedCells: i, resetGame: o } = Hr.getState();
+    return n.minesCount && i(), n.mode && o(), n.onWinMode === "reset" && s.onWinMode !== "reset" && (r.onWinValue = 0), n.onLossMode === "reset" && s.onLossMode !== "reset" && (r.onLossValue = 0), r;
   }),
   resetSettings: () => t(Mg),
   validateSettings: () => {
@@ -16614,9 +16614,9 @@ function AP({
   }, R = () => {
     x(!1);
   };
-  ve(() => {
+  we(() => {
     a.length === 0 && l(0), l(SS(d, a.length));
-  }, [a, l, d]), ve(() => (document.addEventListener("mouseup", R), () => {
+  }, [a, l, d]), we(() => (document.addEventListener("mouseup", R), () => {
     document.removeEventListener("mouseup", R);
   }), []);
   const k = (T, M) => {
@@ -17494,7 +17494,7 @@ const JP = ({
   } = po(), { addToast: B } = Po(), _ = (ue) => s.crypto && d && f ? ue.toFixed(d.fractionalDigits) : ue.toFixed(s.fractionalDigits), [j, N] = it(
     _(w)
   ), [W, Y] = it(null);
-  ve(() => {
+  we(() => {
     if (w > Number(u.minBet))
       N(_(w));
     else if (u.minBet) {
@@ -17896,7 +17896,7 @@ const JP = ({
     removeFetchingCell: je,
     fetchingCells: De
   } = Hr(), { updateProfitData: Oe } = No(), { addToast: Ve } = Po(), pt = (Q) => Qn.reverseConvertCurrency(Number(Q), S.code, g.currencyCode, C);
-  ve(() => {
+  we(() => {
     x || uy(), (async () => {
       if (t)
         await et();
@@ -18108,13 +18108,11 @@ const JP = ({
     Ve,
     O.length
   ]);
-  ve(() => () => {
+  we(() => () => {
     r.current && clearTimeout(r.current);
-  }, []), ve(() => {
+  }, []), we(() => {
     f || (s.current = [], r.current && clearTimeout(r.current));
-  }, [f]), ve(() => {
-    f || _(), l === "manual" && N();
-  }, [l]);
+  }, [f]);
   const ns = d === "neobet" && !e ? {
     backgroundImage: `url(https://nano-public.s3.eu-west-1.amazonaws.com/blink/${d}/images/mines-bg.jpg)`,
     backgroundSize: "cover",
@@ -19388,7 +19386,7 @@ const KD = CD, YD = qD, QD = xD, GD = RD, ZD = wD, Fg = vD, XD = ED, JD = (t, e,
     platform: i
   });
 };
-var Pa = typeof document < "u" ? Md : ve;
+var Pa = typeof document < "u" ? Md : we;
 function bl(t, e) {
   if (t === e)
     return !0;
@@ -29279,7 +29277,7 @@ function XI() {
 }
 function JI() {
   const t = rt(null), e = rt(null), [n, s] = it(null), { profit: r } = No(), i = Yl();
-  return ve(() => {
+  return we(() => {
     if (t.current) {
       const o = t.current.getContext("2d");
       o && (e.current && e.current.destroy(), e.current = new _n(o, {
@@ -30668,7 +30666,7 @@ const ew = V.createContext({
 b5(`[data-vaul-drawer]{touch-action:none;will-change:transform;transition:transform .5s cubic-bezier(.32, .72, 0, 1);animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=open]{animation-name:slideFromBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=bottom][data-state=closed]{animation-name:slideToBottom}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=open]{animation-name:slideFromTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=top][data-state=closed]{animation-name:slideToTop}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=open]{animation-name:slideFromLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=left][data-state=closed]{animation-name:slideToLeft}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=open]{animation-name:slideFromRight}[data-vaul-drawer][data-vaul-snap-points=false][data-vaul-drawer-direction=right][data-state=closed]{animation-name:slideToRight}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,100%,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,-100%,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(-100%,0,0)}[data-vaul-drawer][data-vaul-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(100%,0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=top]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=bottom]{transform:translate3d(0,var(--snap-point-height,0),0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=left]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-drawer][data-vaul-delayed-snap-points=true][data-vaul-drawer-direction=right]{transform:translate3d(var(--snap-point-height,0),0,0)}[data-vaul-overlay][data-vaul-snap-points=false]{animation-duration:.5s;animation-timing-function:cubic-bezier(0.32,0.72,0,1)}[data-vaul-overlay][data-vaul-snap-points=false][data-state=open]{animation-name:fadeIn}[data-vaul-overlay][data-state=closed]{animation-name:fadeOut}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:0;transition:opacity .5s cubic-bezier(.32, .72, 0, 1)}[data-vaul-overlay][data-vaul-snap-points=true]{opacity:1}[data-vaul-drawer]:not([data-vaul-custom-container=true])::after{content:'';position:absolute;background:inherit;background-color:inherit}[data-vaul-drawer][data-vaul-drawer-direction=top]::after{top:initial;bottom:100%;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=bottom]::after{top:100%;bottom:initial;left:0;right:0;height:200%}[data-vaul-drawer][data-vaul-drawer-direction=left]::after{left:initial;right:100%;top:0;bottom:0;width:200%}[data-vaul-drawer][data-vaul-drawer-direction=right]::after{left:100%;right:initial;top:0;bottom:0;width:200%}[data-vaul-overlay][data-vaul-snap-points=true]:not([data-vaul-snap-points-overlay=true]):not(
 [data-state=closed]
 ){opacity:0}[data-vaul-overlay][data-vaul-snap-points-overlay=true]{opacity:1}[data-vaul-handle]{display:block;position:relative;opacity:.7;background:#e2e2e4;margin-left:auto;margin-right:auto;height:5px;width:32px;border-radius:1rem;touch-action:pan-y}[data-vaul-handle]:active,[data-vaul-handle]:hover{opacity:1}[data-vaul-handle-hitarea]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100%,2.75rem);height:max(100%,2.75rem);touch-action:inherit}@media (hover:hover) and (pointer:fine){[data-vaul-drawer]{user-select:none}}@media (pointer:fine){[data-vaul-handle-hitarea]:{width:100%;height:100%}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{to{opacity:0}}@keyframes slideFromBottom{from{transform:translate3d(0,100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToBottom{to{transform:translate3d(0,100%,0)}}@keyframes slideFromTop{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToTop{to{transform:translate3d(0,-100%,0)}}@keyframes slideFromLeft{from{transform:translate3d(-100%,0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToLeft{to{transform:translate3d(-100%,0,0)}}@keyframes slideFromRight{from{transform:translate3d(100%,0,0)}to{transform:translate3d(0,0,0)}}@keyframes slideToRight{to{transform:translate3d(100%,0,0)}}`);
-const y5 = 24, v5 = typeof window < "u" ? Md : ve;
+const y5 = 24, v5 = typeof window < "u" ? Md : we;
 function CA(...t) {
   return (...e) => {
     for (let n of t)
@@ -31198,7 +31196,7 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
     }), ee.target.setPointerCapture(ee.pointerId), Ye.current = lt(w) ? ee.pageY : ee.pageX);
   }
   function ui(ee, Ae) {
-    var Me, we;
+    var Me, xe;
     let be = ee;
     const vt = (Me = window.getSelection()) == null ? void 0 : Me.toString(), dt = Z.current ? xa(Z.current, w) : null, Tt = /* @__PURE__ */ new Date();
     if (be.hasAttribute("data-vaul-no-drag") || be.closest("[data-vaul-no-drag]"))
@@ -31211,7 +31209,7 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
       return !0;
     if (vt && vt.length > 0)
       return !1;
-    if (Tt.getTime() - ((we = pt.current) == null ? void 0 : we.getTime()) < c && dt === 0 || Ae)
+    if (Tt.getTime() - ((xe = pt.current) == null ? void 0 : xe.getTime()) < c && dt === 0 || Ae)
       return pt.current = Tt, !1;
     for (; be; ) {
       if (be.scrollHeight > be.clientHeight) {
@@ -31226,19 +31224,19 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
   }
   function zo(ee) {
     if (Z.current && W) {
-      const Ae = w === "bottom" || w === "right" ? 1 : -1, Me = (Ye.current - (lt(w) ? ee.pageY : ee.pageX)) * Ae, we = Me > 0, be = i && !u && !we;
+      const Ae = w === "bottom" || w === "right" ? 1 : -1, Me = (Ye.current - (lt(w) ? ee.pageY : ee.pageX)) * Ae, xe = Me > 0, be = i && !u && !xe;
       if (be && Q === 0) return;
       const vt = Math.abs(Me), dt = document.querySelector("[data-vaul-drawer-wrapper]"), Tt = w === "bottom" || w === "top" ? Xt.current : _t.current;
       let Ot = vt / Tt;
-      const On = Uo(vt, we);
-      if (On !== null && (Ot = On), be && Ot >= 1 || !et.current && !ui(ee.target, we)) return;
+      const On = Uo(vt, xe);
+      if (On !== null && (Ot = On), be && Ot >= 1 || !et.current && !ui(ee.target, xe)) return;
       if (Z.current.classList.add(yu), et.current = !0, at(Z.current, {
         transition: "none"
       }), at(je.current, {
         transition: "none"
       }), i && Pn({
         draggedDistance: Me
-      }), we && !i) {
+      }), xe && !i) {
         const Ut = P5(Me), mr = Math.min(Ut * -1, 0) * Ae;
         at(Z.current, {
           transform: lt(w) ? `translate3d(0, ${mr}px, 0)` : `translate3d(${mr}px, 0, 0)`
@@ -31271,8 +31269,8 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
       if (!Z.current || !k) return;
       const Me = document.activeElement;
       if (qd(Me) || tt.current) {
-        var we;
-        const be = ((we = window.visualViewport) == null ? void 0 : we.height) || 0, vt = window.innerHeight;
+        var xe;
+        const be = ((xe = window.visualViewport) == null ? void 0 : xe.height) || 0, vt = window.innerHeight;
         let dt = vt - be;
         const Tt = Z.current.getBoundingClientRect().height || 0, Ot = Tt > vt * 0.8;
         Vt.current || (Vt.current = Tt);
@@ -31336,19 +31334,19 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
     Z.current.classList.remove(yu), et.current = !1, Y(!1), Ve.current = /* @__PURE__ */ new Date();
     const Ae = xa(Z.current, w);
     if (!ui(ee.target, !1) || !Ae || Number.isNaN(Ae) || Oe.current === null) return;
-    const Me = Ve.current.getTime() - Oe.current.getTime(), we = Ye.current - (lt(w) ? ee.pageY : ee.pageX), be = Math.abs(we) / Me;
+    const Me = Ve.current.getTime() - Oe.current.getTime(), xe = Ye.current - (lt(w) ? ee.pageY : ee.pageX), be = Math.abs(xe) / Me;
     if (be > 0.05 && (ae(!0), setTimeout(() => {
       ae(!1);
     }, 200)), i) {
       Ze({
-        draggedDistance: we * (w === "bottom" || w === "right" ? 1 : -1),
+        draggedDistance: xe * (w === "bottom" || w === "right" ? 1 : -1),
         closeDrawer: Dn,
         velocity: be,
         dismissible: u
       }), r == null || r(ee, !0);
       return;
     }
-    if (w === "bottom" || w === "right" ? we > 0 : we < 0) {
+    if (w === "bottom" || w === "right" ? xe > 0 : xe < 0) {
       Ho(), r == null || r(ee, !0);
       return;
     }
@@ -31379,26 +31377,26 @@ function cw({ open: t, onOpenChange: e, children: n, onDrag: s, onRelease: r, sn
       transition: `transform ${ze.DURATION}s cubic-bezier(${ze.EASE.join(",")})`,
       transform: `scale(${Ae}) translate3d(0, ${Me}px, 0)`
     }), !ee && Z.current && (kt.current = setTimeout(() => {
-      const we = xa(Z.current, w);
+      const xe = xa(Z.current, w);
       at(Z.current, {
         transition: "none",
-        transform: lt(w) ? `translate3d(0, ${we}px, 0)` : `translate3d(${we}px, 0, 0)`
+        transform: lt(w) ? `translate3d(0, ${xe}px, 0)` : `translate3d(${xe}px, 0, 0)`
       });
     }, 500));
   }
   function qc(ee, Ae) {
     if (Ae < 0) return;
-    const Me = (window.innerWidth - Ws) / window.innerWidth, we = Me + Ae * (1 - Me), be = -Ws + Ae * Ws;
+    const Me = (window.innerWidth - Ws) / window.innerWidth, xe = Me + Ae * (1 - Me), be = -Ws + Ae * Ws;
     at(Z.current, {
-      transform: lt(w) ? `scale(${we}) translate3d(0, ${be}px, 0)` : `scale(${we}) translate3d(${be}px, 0, 0)`,
+      transform: lt(w) ? `scale(${xe}) translate3d(0, ${be}px, 0)` : `scale(${xe}) translate3d(${be}px, 0, 0)`,
       transition: "none"
     });
   }
   function Ec(ee, Ae) {
-    const Me = lt(w) ? window.innerHeight : window.innerWidth, we = Ae ? (Me - Ws) / Me : 1, be = Ae ? -Ws : 0;
+    const Me = lt(w) ? window.innerHeight : window.innerWidth, xe = Ae ? (Me - Ws) / Me : 1, be = Ae ? -Ws : 0;
     Ae && at(Z.current, {
       transition: `transform ${ze.DURATION}s cubic-bezier(${ze.EASE.join(",")})`,
-      transform: lt(w) ? `scale(${we}) translate3d(0, ${be}px, 0)` : `scale(${we}) translate3d(${be}px, 0, 0)`
+      transform: lt(w) ? `scale(${xe}) translate3d(0, ${be}px, 0)` : `scale(${xe}) translate3d(${be}px, 0, 0)`
     });
   }
   return /* @__PURE__ */ V.createElement(Zx, {
@@ -32409,7 +32407,7 @@ function uF() {
     isLoadingCurrentSeed: c,
     fetchCurrentSeed: u
   } = Le(), { authToken: d } = Jr(), f = dr();
-  ve(() => {
+  we(() => {
     a && d && u(d);
   }, [a, d, u]);
   const h = ke(() => {
@@ -33400,7 +33398,7 @@ function UF() {
     fetchHistory: a,
     isLoadingHistory: l
   } = Le(), { authToken: c } = Jr();
-  ve(() => {
+  we(() => {
     r && c && a(c, "mines");
   }, [r, c, a]);
   const u = (A) => {
@@ -33612,7 +33610,7 @@ const zF = ({
     h,
     m
   ]);
-  if (ve(() => {
+  if (we(() => {
     if (!i) return;
     const k = {}, T = i.preferredExchangeCurrency;
     i.currencyDefinitions.forEach((M) => {
@@ -33620,11 +33618,11 @@ const zF = ({
         k[`${M.code}_${P}`] = O.rate, T === O.currencyDefinition.code && w(O.currencyDefinition);
       });
     }), y(k), x(i.showFiat);
-  }, [i, y, w, x]), ve(() => {
+  }, [i, y, w, x]), we(() => {
     q();
-  }, [t, e, q]), ve(() => {
+  }, [t, e, q]), we(() => {
     b(r);
-  }, [r, b]), ve(() => {
+  }, [r, b]), we(() => {
     a.status === "ready" && d.currencyCode !== n && C(n);
   }, [n, a.status, d.currencyCode, C]), a.status === "initializing")
     return /* @__PURE__ */ p.jsx("div", { className: "w-full h-full flex items-center justify-center", children: "Loading..." });
@@ -33647,7 +33645,7 @@ const zF = ({
     selectedCurrency: n,
     balance: s
   } = Le();
-  return ve(() => {
+  return we(() => {
     if (e.current && s !== 0) {
       const i = new CustomEvent("balanceUpdate", {
         bubbles: !0,
@@ -33659,7 +33657,7 @@ const zF = ({
       });
       e.current.dispatchEvent(i), console.log("Pushing event balanceUpdate. New balance:", s);
     }
-  }, [s, n.currencyCode]), ve(() => {
+  }, [s, n.currencyCode]), we(() => {
     if (e.current) {
       const i = e.current.getRootNode();
       if (i instanceof ShadowRoot) {
