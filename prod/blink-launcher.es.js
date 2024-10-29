@@ -1,4 +1,4 @@
-/* Built at: 2024-10-29T09:13:45.938Z */
+/* Built at: 2024-10-29T09:33:01.757Z */
 var g1 = Object.defineProperty;
 var m1 = (t, e, n) => e in t ? g1(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var W = (t, e, n) => m1(t, typeof e != "symbol" ? e + "" : e, n);
@@ -33601,12 +33601,9 @@ const HF = ({
     try {
       g(), P(), k(!1), u(null), l({ status: "initializing" }), x(!0), await o(e), await bS(s);
       const N = await TT(e, t);
-      N.activeRound ? (N.activeRound.currency !== n ? (b(N.activeRound.currencyDefinition), f(n)) : b(N.currencyDefinition), S({
+      N.activeRound ? (N.activeRound.currency !== n ? (b(N.activeRound.currencyDefinition), f(n)) : b(N.currencyDefinition), k(!0), S({
         ...N.activeRound,
         isRoundActive: !0
-      }), k(!0), h({ betAmount: N.activeRound.wager }), w({
-        minBet: N.allowedBets[0],
-        maxBet: N.allowedBets[1]
       })) : (b(N.currencyDefinition), h({ betAmount: Number(N.allowedBets[0]) }), w({
         minBet: N.allowedBets[0],
         maxBet: N.allowedBets[1]
@@ -33641,7 +33638,7 @@ const HF = ({
         b(L.currencyDefinition), w({
           minBet: L.allowedBets[0],
           maxBet: L.allowedBets[1]
-        }), h({ betAmount: Number(L.allowedBets[0]) }), y(L.balance);
+        }), A || h({ betAmount: Number(L.allowedBets[0]) }), y(L.balance);
       } catch (L) {
         console.error("Currency update failed:", L);
       } finally {
