@@ -1,4 +1,4 @@
-/* Built at: 2024-10-30T05:14:16.950Z */
+/* Built at: 2024-10-30T05:19:57.020Z */
 var HM = Object.defineProperty;
 var YM = (t, e, n) => e in t ? HM(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var Y = (t, e, n) => YM(t, typeof e != "symbol" ? e + "" : e, n);
@@ -18140,7 +18140,7 @@ const TF = ({
     f || (r.current = [], s.current && clearTimeout(s.current));
   }, [f]);
   const St = d === "neobet" && !e ? {
-    backgroundImage: `url(https://nano-public.s3.eu-west-1.amazonaws.com/blink/images/${d}/mines-bg.jpg)`,
+    backgroundImage: `url(https://nano-public.s3.eu-west-1.amazonaws.com/blink/images/mines/${d}/mines-bg.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center"
   } : {};
