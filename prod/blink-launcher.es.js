@@ -1,4 +1,4 @@
-/* Built at: 2024-10-30T05:19:57.020Z */
+/* Built at: 2024-10-30T05:24:03.658Z */
 var HM = Object.defineProperty;
 var YM = (t, e, n) => e in t ? HM(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var Y = (t, e, n) => YM(t, typeof e != "symbol" ? e + "" : e, n);
@@ -2415,7 +2415,7 @@ async function K2(t) {
       fallbackLng: "en",
       backend: {
         crossDomain: !0,
-        loadPath: "https://eu.blink.run/games/blink-games/translations/{{lng}}.json"
+        loadPath: "https://nano-public.s3.eu-west-1.amazonaws.com/blink/translations/{{lng}}.json"
       }
     });
   } catch (r) {
