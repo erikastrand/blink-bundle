@@ -1,4 +1,4 @@
-/* Built at: 2024-10-31T13:36:17.209Z */
+/* Built at: 2024-10-31T13:47:21.362Z */
 var JM = Object.defineProperty;
 var e2 = (t, e, n) => e in t ? JM(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var Y = (t, e, n) => e2(t, typeof e != "symbol" ? e + "" : e, n);
@@ -45111,8 +45111,8 @@ const _i = () => {
       replaysOnErrorSampleRate: 1,
       autoSessionTracking: !1,
       beforeSend(e) {
-        if (!_i())
-          return null;
+        if (console.log("Sentry beforeSend" + e), !_i())
+          return console.log("webComponent not present. Exiting."), null;
         const n = Qm();
         return e.contexts = {
           ...e.contexts,
