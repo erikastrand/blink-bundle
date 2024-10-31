@@ -1,4 +1,4 @@
-/* Built at: 2024-10-31T08:35:52.588Z */
+/* Built at: 2024-10-31T08:39:44.104Z */
 var XM = Object.defineProperty;
 var JM = (t, e, n) => e in t ? XM(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var Y = (t, e, n) => JM(t, typeof e != "symbol" ? e + "" : e, n);
@@ -11805,7 +11805,7 @@ const ed = new oj(), aj = ({
   402: "Insufficient balance: Please add funds to continue.",
   416: "Betting limit exceeded: Please lower your bet amount.",
   417: "Action forbidden due to active bonus. Please check bonus terms.",
-  500: "An unexpected error occurred. Try to reload or contact customer support."
+  500: "An unexpected error occurred. Reload or contact customer support."
 }, dj = (t) => uj[t] || "An unknown error occurred. Please try again.", as = (t) => {
   var e;
   if (Te.isAxiosError(t)) {
