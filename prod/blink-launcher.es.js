@@ -1,4 +1,4 @@
-/* Built at: 2024-10-31T10:31:39.052Z */
+/* Built at: 2024-10-31T12:18:19.668Z */
 var e2 = Object.defineProperty;
 var t2 = (t, e, n) => e in t ? e2(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var Y = (t, e, n) => t2(t, typeof e != "symbol" ? e + "" : e, n);
@@ -45059,6 +45059,7 @@ const _s = () => {
       tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
       replaysSessionSampleRate: 0.1,
       replaysOnErrorSampleRate: 1,
+      autoSessionTracking: !1,
       beforeSend(e) {
         if (!_s())
           return null;
