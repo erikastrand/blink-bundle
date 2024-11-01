@@ -1,4 +1,4 @@
-/* Built at: 2024-11-01T08:21:10.201Z */
+/* Built at: 2024-11-01T08:39:55.599Z */
 var n2 = Object.defineProperty;
 var r2 = (t, e, n) => e in t ? n2(t, e, { enumerable: !0, configurable: !0, writable: !0, value: n }) : t[e] = n;
 var K = (t, e, n) => r2(t, typeof e != "symbol" ? e + "" : e, n);
@@ -18071,7 +18071,7 @@ function gx() {
     {
       ref: e,
       className: `
-         bg-secondary h-[50px] bg-opacity-30 ${t.length === 0 && "bg-opacity-0"} scrollbar-hide
+         bg-secondary h-[50px] ${t.length === 0 ? "bg-opacity-0" : "bg-opacity-30"} scrollbar-hide
         ${n ? "mb-0 w-[94vw] max-w-full" : "p-2 absolute top-0 left-0 right-0 w-full"}
       `,
       children: [
@@ -18107,7 +18107,7 @@ function gx() {
           },
           s
         )) }) }),
-        /* @__PURE__ */ g.jsx("div", { className: "absolute top-0 right-0 bottom-0 w-20 pointer-events-none bg-gradient-to-l from-gray-800 to-transparent" })
+        t.length !== 0 && /* @__PURE__ */ g.jsx("div", { className: "absolute top-0 right-0 bottom-0 w-20 pointer-events-none bg-gradient-to-l from-gray-800 to-transparent" })
       ]
     }
   );
@@ -34175,7 +34175,8 @@ function K7() {
     o,
     c,
     i,
-    s
+    s,
+    d
   ]), C = Je(
     (O) => {
       i(O.target.value);
